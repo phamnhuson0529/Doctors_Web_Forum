@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DD20C7B4-604E-4E18-AC35-32F8BF0822C8}|Doctors_Web_Forum.DAL\\Doctors_Web_Forum.DAL.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.dal\\models\\topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD20C7B4-604E-4E18-AC35-32F8BF0822C8}|Doctors_Web_Forum.DAL\\Doctors_Web_Forum.DAL.csproj|solutionrelative:doctors_web_forum.dal\\models\\topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E6232865-5598-4F27-B996-8F51340868D4}|Doctors_Web_Forum.BLL\\Doctors_Web_Forum.BLL.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6232865-5598-4F27-B996-8F51340868D4}|Doctors_Web_Forum.BLL\\Doctors_Web_Forum.BLL.csproj|solutionrelative:doctors_web_forum.bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -27,6 +31,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Topic.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.DAL\\Models\\Topic.cs",
+              "RelativeDocumentMoniker": "Doctors_Web_Forum.DAL\\Models\\Topic.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.DAL\\Models\\Topic.cs",
+              "RelativeToolTip": "Doctors_Web_Forum.DAL\\Models\\Topic.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T03:04:07.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.BLL\\Class1.cs",
               "RelativeDocumentMoniker": "Doctors_Web_Forum.BLL\\Class1.cs",
