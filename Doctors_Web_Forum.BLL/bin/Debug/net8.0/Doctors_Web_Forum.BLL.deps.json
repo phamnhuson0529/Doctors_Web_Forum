@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Doctors_Web_Forum.BLL/1.0.0": {
+        "runtime": {
+          "Doctors_Web_Forum.BLL.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Doctors_Web_Forum.BLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

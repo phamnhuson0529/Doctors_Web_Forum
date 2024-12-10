@@ -1,0 +1,12 @@
+C:\Users\Admin\Desktop\Doctors_Web_Forum\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\Doctors_Web_Forum.DAL.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Doctors_Web_Forum\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\Doctors_Web_Forum.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Doctors_Web_Forum\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\Doctors_Web_Forum.DAL.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Doctors_Web_Forum\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\Doctors_Web_Forum.DAL.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Doctors_Web_Forum\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\Doctors_Web_Forum.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Doctors_Web_Forum\Doctors_Web_Forum\Doctors_Web_Forum.DAL\bin\Debug\net8.0\Doctors_Web_Forum.DAL.deps.json
+C:\Users\Admin\Desktop\Doctors_Web_Forum\Doctors_Web_Forum\Doctors_Web_Forum.DAL\bin\Debug\net8.0\Doctors_Web_Forum.DAL.dll
+C:\Users\Admin\Desktop\Doctors_Web_Forum\Doctors_Web_Forum\Doctors_Web_Forum.DAL\bin\Debug\net8.0\Doctors_Web_Forum.DAL.pdb
+C:\Users\Admin\Desktop\Doctors_Web_Forum\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\Doctors_Web_Forum.DAL.dll
+C:\Users\Admin\Desktop\Doctors_Web_Forum\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\refint\Doctors_Web_Forum.DAL.dll
+C:\Users\Admin\Desktop\Doctors_Web_Forum\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\Doctors_Web_Forum.DAL.pdb
+C:\Users\Admin\Desktop\Doctors_Web_Forum\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\ref\Doctors_Web_Forum.DAL.dll
