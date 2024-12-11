@@ -21,7 +21,20 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Doctors_Web_Forum.BLL\Doctors_Web_Forum.BLL.csproj" />
     <ProjectReference Include="..\Doctors_Web_Forum.DAL\Doctors_Web_Forum.DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Answer\" />
+    <Folder Include="Areas\Admin\Views\AdminLog\" />
+    <Folder Include="Areas\Admin\Views\User\" />
+    <Folder Include="Areas\Admin\Views\Profile\" />
+    <Folder Include="Areas\Admin\Views\Question\" />
+    <Folder Include="Areas\Admin\Views\Topic\" />
+    <Folder Include="Views\Topic\" />
   </ItemGroup>
 
 </Project>
