@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DD20C7B4-604E-4E18-AC35-32F8BF0822C8}|Doctors_Web_Forum.DAL\\Doctors_Web_Forum.DAL.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.dal\\models\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD20C7B4-604E-4E18-AC35-32F8BF0822C8}|Doctors_Web_Forum.DAL\\Doctors_Web_Forum.DAL.csproj|solutionrelative:doctors_web_forum.dal\\models\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD20C7B4-604E-4E18-AC35-32F8BF0822C8}|Doctors_Web_Forum.DAL\\Doctors_Web_Forum.DAL.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.dal\\models\\loginattempt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD20C7B4-604E-4E18-AC35-32F8BF0822C8}|Doctors_Web_Forum.DAL\\Doctors_Web_Forum.DAL.csproj|solutionrelative:doctors_web_forum.dal\\models\\loginattempt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD20C7B4-604E-4E18-AC35-32F8BF0822C8}|Doctors_Web_Forum.DAL\\Doctors_Web_Forum.DAL.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.dal\\models\\doctorprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD20C7B4-604E-4E18-AC35-32F8BF0822C8}|Doctors_Web_Forum.DAL\\Doctors_Web_Forum.DAL.csproj|solutionrelative:doctors_web_forum.dal\\models\\doctorprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD20C7B4-604E-4E18-AC35-32F8BF0822C8}|Doctors_Web_Forum.DAL\\Doctors_Web_Forum.DAL.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.dal\\models\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD20C7B4-604E-4E18-AC35-32F8BF0822C8}|Doctors_Web_Forum.DAL\\Doctors_Web_Forum.DAL.csproj|solutionrelative:doctors_web_forum.dal\\models\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD20C7B4-604E-4E18-AC35-32F8BF0822C8}|Doctors_Web_Forum.DAL\\Doctors_Web_Forum.DAL.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.dal\\models\\adminlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD20C7B4-604E-4E18-AC35-32F8BF0822C8}|Doctors_Web_Forum.DAL\\Doctors_Web_Forum.DAL.csproj|solutionrelative:doctors_web_forum.dal\\models\\adminlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DD20C7B4-604E-4E18-AC35-32F8BF0822C8}|Doctors_Web_Forum.DAL\\Doctors_Web_Forum.DAL.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.dal\\models\\topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD20C7B4-604E-4E18-AC35-32F8BF0822C8}|Doctors_Web_Forum.DAL\\Doctors_Web_Forum.DAL.csproj|solutionrelative:doctors_web_forum.dal\\models\\topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD20C7B4-604E-4E18-AC35-32F8BF0822C8}|Doctors_Web_Forum.DAL\\Doctors_Web_Forum.DAL.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.dal\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD20C7B4-604E-4E18-AC35-32F8BF0822C8}|Doctors_Web_Forum.DAL\\Doctors_Web_Forum.DAL.csproj|solutionrelative:doctors_web_forum.dal\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD20C7B4-604E-4E18-AC35-32F8BF0822C8}|Doctors_Web_Forum.DAL\\Doctors_Web_Forum.DAL.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.dal\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD20C7B4-604E-4E18-AC35-32F8BF0822C8}|Doctors_Web_Forum.DAL\\Doctors_Web_Forum.DAL.csproj|solutionrelative:doctors_web_forum.dal\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6232865-5598-4F27-B996-8F51340868D4}|Doctors_Web_Forum.BLL\\Doctors_Web_Forum.BLL.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,20 +58,111 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.DAL\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Doctors_Web_Forum.DAL\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.DAL\\Models\\User.cs",
+              "RelativeToolTip": "Doctors_Web_Forum.DAL\\Models\\User.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T01:54:13.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminLog.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.DAL\\Models\\AdminLog.cs",
+              "RelativeDocumentMoniker": "Doctors_Web_Forum.DAL\\Models\\AdminLog.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.DAL\\Models\\AdminLog.cs",
+              "RelativeToolTip": "Doctors_Web_Forum.DAL\\Models\\AdminLog.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T01:53:35.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Answer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.DAL\\Models\\Answer.cs",
+              "RelativeDocumentMoniker": "Doctors_Web_Forum.DAL\\Models\\Answer.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.DAL\\Models\\Answer.cs",
+              "RelativeToolTip": "Doctors_Web_Forum.DAL\\Models\\Answer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T01:53:11.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DoctorProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.DAL\\Models\\DoctorProfile.cs",
+              "RelativeDocumentMoniker": "Doctors_Web_Forum.DAL\\Models\\DoctorProfile.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.DAL\\Models\\DoctorProfile.cs",
+              "RelativeToolTip": "Doctors_Web_Forum.DAL\\Models\\DoctorProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T01:52:27.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginAttempt.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.DAL\\Models\\LoginAttempt.cs",
+              "RelativeDocumentMoniker": "Doctors_Web_Forum.DAL\\Models\\LoginAttempt.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.DAL\\Models\\LoginAttempt.cs",
+              "RelativeToolTip": "Doctors_Web_Forum.DAL\\Models\\LoginAttempt.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T01:51:57.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Profile.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.DAL\\Models\\Profile.cs",
+              "RelativeDocumentMoniker": "Doctors_Web_Forum.DAL\\Models\\Profile.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.DAL\\Models\\Profile.cs",
+              "RelativeToolTip": "Doctors_Web_Forum.DAL\\Models\\Profile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T01:51:28.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Question.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.DAL\\Models\\Question.cs",
+              "RelativeDocumentMoniker": "Doctors_Web_Forum.DAL\\Models\\Question.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.DAL\\Models\\Question.cs",
+              "RelativeToolTip": "Doctors_Web_Forum.DAL\\Models\\Question.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T01:49:56.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Topic.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.DAL\\Models\\Topic.cs",
               "RelativeDocumentMoniker": "Doctors_Web_Forum.DAL\\Models\\Topic.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.DAL\\Models\\Topic.cs",
               "RelativeToolTip": "Doctors_Web_Forum.DAL\\Models\\Topic.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAuAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T03:04:07.307Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.BLL\\Class1.cs",
               "RelativeDocumentMoniker": "Doctors_Web_Forum.BLL\\Class1.cs",
@@ -51,8 +170,7 @@
               "RelativeToolTip": "Doctors_Web_Forum.BLL\\Class1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T02:48:17.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T02:48:17.035Z"
             }
           ]
         }
