@@ -1,21 +1,20 @@
 ﻿using Doctors_Web_Forum.BLL.IServices;
-using Doctors_Web_Forum.BLL.Services;
 using Doctors_Web_Forum.DAL.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class TopicsController : Controller
     {
-        private readonly TopicService _topicService;
+        private readonly ITopicService _topicService;
 
-        public TopicsController(TopicService topicService)
+        public TopicsController(ITopicService topicService)
         {
             _topicService = topicService;
         }
 
-        // GET : topics
-
+        // GET : Topics
         public async Task<IActionResult> Index()
         {
             var topics = await _topicService.GetAllTopicsAsync();
@@ -33,6 +32,12 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
             return View(topic);
         }
 
+        // GET: Topics/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
         // POST: Topics/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -45,7 +50,6 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
             }
             return View(topic);
         }
-
 
         // GET: Topics/Edit/5
         public async Task<IActionResult> Edit(int id)
@@ -73,22 +77,20 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
                 try
                 {
                     await _topicService.UpdateTopicAsync(topic);
+                    return RedirectToAction(nameof(Index));
                 }
-                catch (System.Exception)
+                catch (KeyNotFoundException)
                 {
-                    if (!await TopicExists(topic.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    return NotFound();
                 }
-                return RedirectToAction(nameof(Index));
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError("", $"Error updating topic: {ex.Message}");
+                }
             }
             return View(topic);
         }
+
         // GET: Topics/Delete/5
         public async Task<IActionResult> Delete(int id)
         {
@@ -118,6 +120,5 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
             var topic = await _topicService.GetTopicByIdAsync(id);
             return topic != null;
         }
-
     }
 }

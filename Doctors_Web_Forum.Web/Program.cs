@@ -24,6 +24,13 @@ builder.Services.AddScoped<ITopicService,TopicService>();
 
 var app = builder.Build();
 
+// cấu hình Areas Admin
+
+app.MapControllerRoute(
+    name: "Areas",
+    pattern: "{area:exists}/{controller=Topics}/{action=Index}/{id?}");
+
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

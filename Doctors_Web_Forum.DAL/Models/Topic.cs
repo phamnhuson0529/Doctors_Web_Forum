@@ -13,6 +13,8 @@ namespace Doctors_Web_Forum.DAL.Models
     {
         [Key]
         public int Id { get; set; }
+
+        [Column("topic_name")]
         public string? TopicName { get; set; }
         public string? Description { get; set; }
         public bool Status { get; set; }
