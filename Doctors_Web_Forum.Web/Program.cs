@@ -1,3 +1,5 @@
+﻿using Doctors_Web_Forum.BLL.IServices;
+using Doctors_Web_Forum.BLL.Services;
 using Doctors_Web_Forum.DAL.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,10 +10,26 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 
-
+// Add Service DbContext
 builder.Services.AddDbContext<DataDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionSQL")));
 
+
+// SignUp Service Scoped
+
+
+
+builder.Services.AddScoped<ITopicService,TopicService>();
+
+
+
 var app = builder.Build();
+
+// cấu hình Areas Admin
+
+app.MapControllerRoute(
+    name: "Areas",
+    pattern: "{area:exists}/{controller=Topics}/{action=Index}/{id?}");
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

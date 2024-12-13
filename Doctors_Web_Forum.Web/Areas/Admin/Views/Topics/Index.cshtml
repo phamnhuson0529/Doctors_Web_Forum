@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Doctors_Web_Forum.DAL.Models.Topic>
+
+@{
+    ViewData["Title"] = "Topics List";
+}
+
+<h1>Topics</h1>
+
+<a asp-action="Create" class="btn btn-primary mb-3">Create New Topic</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Topic Name</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            int count = 1;
+            foreach (var topic in Model)
+            {
+                <tr>
+                    <td>@count</td>
+                    <td>@topic.TopicName</td>
+                    <td>@topic.Description</td>
+                    <td>@(topic.Status ? "Active" : "Inactive")</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@topic.Id" class="btn btn-info btn-sm">Details</a>
+                        <a asp-action="Edit" asp-route-id="@topic.Id" class="btn btn-warning btn-sm">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@topic.Id" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+                count++;
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="5" class="text-center">No topics available.</td>
+            </tr>
+        }
+    </tbody>
+</table>
