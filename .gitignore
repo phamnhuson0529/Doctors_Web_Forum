@@ -11,7 +11,7 @@ obj/
 .idea/
 *.user
 *.suo
-*.csproj
+
 # Các file liên quan đến chỉ mục của Visual Studio
 .vs/Doctors_Web_Forum/FileContentIndex/
 .vs/Doctors_Web_Forum/config/
