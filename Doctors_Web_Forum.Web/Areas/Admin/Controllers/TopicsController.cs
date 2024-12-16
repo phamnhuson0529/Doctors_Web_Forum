@@ -91,34 +91,36 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
             return View(topic);
         }
 
-        // GET: Topics/Delete/5
         public async Task<IActionResult> Delete(int id)
         {
-            var topic = await _topicService.GetTopicByIdAsync(id);
-            if (topic == null)
+            try
             {
-                return NotFound();
-            }
-            return View(topic);
-        }
 
-        // POST: Topics/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var success = await _topicService.DeleteTopicAsync(id);
-            if (!success)
+                var topic = await _topicService.GetTopicByIdAsync(id);
+                if (topic == null)
+                {
+                    TempData["error"] = "Chủ đề không tồn tại hoặc đã bị xóa!";
+                    return RedirectToAction("Index");
+                }
+
+                // Xóa chủ đề
+                var isDeleted = await _topicService.DeleteTopicAsync(id);
+                if (!isDeleted)
+                {
+                    TempData["error"] = "Có lỗi đã xảy ra khi xóa chủ đề!";
+                    return RedirectToAction("Index");
+                }
+
+                // Thông báo thành công
+                TempData["success"] = "Xóa chủ đề thành công!";
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
             {
-                return NotFound();
+                // Ghi log lỗi nếu cần thiết
+                TempData["error"] = $"Đã xảy ra lỗi không mong muốn: {ex.Message}";
+                return RedirectToAction("Index");
             }
-            return RedirectToAction(nameof(Index));
-        }
-
-        private async Task<bool> TopicExists(int id)
-        {
-            var topic = await _topicService.GetTopicByIdAsync(id);
-            return topic != null;
         }
     }
 }

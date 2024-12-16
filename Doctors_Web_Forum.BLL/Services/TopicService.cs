@@ -65,15 +65,22 @@ namespace Doctors_Web_Forum.BLL.Services
                 throw new ArgumentNullException(nameof(topic), "Topic cannot be null.");
             }
 
+            // Tìm đối tượng hiện tại trong cơ sở dữ liệu
             var existingTopic = await _dataDBContext.Topics.FindAsync(topic.Id);
             if (existingTopic == null)
             {
                 throw new KeyNotFoundException($"Topic with ID {topic.Id} not found.");
             }
 
-            _dataDBContext.Topics.Update(topic);
+            // Cập nhật các thuộc tính
+            existingTopic.TopicName = topic.TopicName;
+            existingTopic.Description = topic.Description;
+            existingTopic.Status = topic.Status;
+
+            // Lưu thay đổi
             await _dataDBContext.SaveChangesAsync();
         }
+
 
         // Remove Topic
 
