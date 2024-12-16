@@ -4,7 +4,7 @@ appsettings.Local.json
 
 # Các thư mục build
 bin/
-obj/
+
 
 # Các file của hệ thống IDE (Visual Studio)
 .vs/
@@ -18,7 +18,7 @@ obj/
 
 # Các thư mục và file do các công cụ biên dịch tạo ra (như DLL, PDB)
 **/bin/
-**/obj/
+
 
 # Các file DLL và PDB
 *.dll
