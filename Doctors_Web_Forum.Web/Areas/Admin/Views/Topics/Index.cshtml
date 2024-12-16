@@ -1,7 +1,15 @@
-﻿@model IEnumerable<Doctors_Web_Forum.DAL.Models.Topic>
+﻿@using Doctors_Web_Forum.DAL.Models
+@model IEnumerable<Doctors_Web_Forum.DAL.Models.Topic>
 
 @{
     ViewData["Title"] = "Topics List";
+    Paginate pager = new Paginate();
+    int pageNo = 0;
+    if (ViewBag.Pager != null)
+    {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+    }
 }
 
 <h1>Topics</h1>
@@ -11,7 +19,7 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>#</th>
+            <th>Id</th>
             <th>Topic Name</th>
             <th>Description</th>
             <th>Status</th>
@@ -21,11 +29,11 @@
     <tbody>
         @if (Model != null && Model.Any())
         {
-            int count = 1;
+           
             foreach (var topic in Model)
             {
                 <tr>
-                    <td>@count</td>
+                    <td>@topic.Id</td>
                     <td>@topic.TopicName</td>
                     <td>@topic.Description</td>
                     <td>@(topic.Status ? "Active" : "Inactive")</td>
@@ -35,7 +43,7 @@
                         <a asp-action="Delete" asp-route-id="@topic.Id" class="btn btn-danger btn-sm">Delete</a>
                     </td>
                 </tr>
-                count++;
+                
             }
         }
         else
@@ -46,3 +54,4 @@
         }
     </tbody>
 </table>
+<partial name="_paging" model="@pager" />
