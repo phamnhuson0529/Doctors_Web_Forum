@@ -4,6 +4,7 @@ appsettings.Local.json
 
 # Các thư mục build
 bin/
+*.cache
 
 
 # Các file của hệ thống IDE (Visual Studio)
