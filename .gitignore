@@ -18,7 +18,7 @@ bin/
 .vs/Doctors_Web_Forum/config/
 
 # Các thư mục và file do các công cụ biên dịch tạo ra (như DLL, PDB)
-**/bin/
+
 
 
 # Các file DLL và PDB
