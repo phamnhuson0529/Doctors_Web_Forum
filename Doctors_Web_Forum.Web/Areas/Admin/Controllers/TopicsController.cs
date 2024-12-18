@@ -15,10 +15,17 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
         }
 
         // GET : Topics
-        public async Task<IActionResult> Index(int pg = 1 , int pageSize = 5 )
+        public async Task<IActionResult> Index(int pg = 1 , int pageSize = 5 , string searchTerm = "" )
         {
-            var (topics, pager) = await _topicService.GetAllTopicsAsync(pg, pageSize);
-            ViewBag.Pager = pager; 
+            var (topics, pager) = await _topicService.GetAllTopicsAsync(pg, pageSize, searchTerm);
+
+            
+            ViewBag.Pager = pager;
+
+            
+            ViewBag.SearchTerm = searchTerm;
+
+            
             return View(topics);
         }
 
