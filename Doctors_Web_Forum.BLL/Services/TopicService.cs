@@ -31,25 +31,35 @@ namespace Doctors_Web_Forum.BLL.Services
 
         // GetAll Topics
 
-        public async Task<(IEnumerable<Topic>topics ,Paginate pager)> GetAllTopicsAsync(int pg , int pageSize =5)
+        public async Task<(IEnumerable<Topic>topics ,Paginate pager)> GetAllTopicsAsync(int pg , int pageSize = 5 , string searchTerm = "")
         {
             if (pg <= 0) pg = 1;
 
-            var topicsQuery = _dataDBContext.Topics.OrderByDescending(t => t.Id);
+            
+            var topicsQuery = _dataDBContext.Topics.AsQueryable();
 
-            // Tính tổng số chủ đề (record count)
+            
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                topicsQuery = topicsQuery.Where(t => t.TopicName.Contains(searchTerm));
+            }
+
+            
+            topicsQuery = topicsQuery.OrderByDescending(t => t.Id);
+
+            
             int recsCount = await topicsQuery.CountAsync();
 
-            // Khởi tạo đối tượng phân trang (Paginate) với thông tin tổng số bản ghi, trang hiện tại và số bản ghi mỗi trang
+            
             var pager = new Paginate(recsCount, pg, pageSize);
 
-            // Tính số bản ghi bỏ qua (skip) cho trang hiện tại
+            
             int recSkip = (pg - 1) * pageSize;
 
-            // Lấy dữ liệu theo phân trang (skip + take)
+            
             var data = await topicsQuery.Skip(recSkip).Take(pageSize).ToListAsync();
 
-            // Trả về một tuple chứa danh sách chủ đề và thông tin phân trang
+            
             return (data, pager);
         }
 
