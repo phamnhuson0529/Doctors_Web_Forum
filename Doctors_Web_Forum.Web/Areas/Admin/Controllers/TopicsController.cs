@@ -48,16 +48,33 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
 
         // POST: Topics/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        
         public async Task<IActionResult> Create([Bind("Id,TopicName,Description,Status")] Topic topic)
         {
             if (ModelState.IsValid)
             {
-                await _topicService.AddTopicAsync(topic);
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    
+                    await _topicService.AddTopicAsync(topic);
+
+                    
+                    TempData["success"] = "Create Topic Successfully!";
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (Exception ex)
+                {
+                    
+                    TempData["error"] = $"An error occurred while adding the topic! : {ex.Message}";
+                    return View(topic);
+                }
             }
+
+            
+            TempData["error"] = "Invalid topic information!";
             return View(topic);
         }
+
 
         // GET: Topics/Edit/5
         public async Task<IActionResult> Edit(int id)
@@ -72,7 +89,7 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
 
         // POST: Topics/Edit/5
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        
         public async Task<IActionResult> Edit(int id, [Bind("Id,TopicName,Description,Status")] Topic topic)
         {
             if (id != topic.Id)
@@ -84,20 +101,31 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
             {
                 try
                 {
+                    // Update the topic
                     await _topicService.UpdateTopicAsync(topic);
+
+                    // Success message
+                    TempData["success"] = "Update Topic Successfully!";
                     return RedirectToAction(nameof(Index));
                 }
                 catch (KeyNotFoundException)
                 {
+                    // Handle missing key
                     return NotFound();
                 }
                 catch (Exception ex)
                 {
+                    // Error message on failure
                     ModelState.AddModelError("", $"Error updating topic: {ex.Message}");
+                    TempData["error"] = $"An error occurred while updating the topic: {ex.Message}";
                 }
             }
+
+            // Invalid model state
+            TempData["error"] = "Invalid topic information!";
             return View(topic);
         }
+
 
         public async Task<IActionResult> Delete(int id)
         {
@@ -107,7 +135,7 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
                 var topic = await _topicService.GetTopicByIdAsync(id);
                 if (topic == null)
                 {
-                    TempData["error"] = "Chủ đề không tồn tại hoặc đã bị xóa!";
+                    TempData["error"] = "Topic does not exist or has been deleted!";
                     return RedirectToAction("Index");
                 }
 
@@ -115,18 +143,18 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
                 var isDeleted = await _topicService.DeleteTopicAsync(id);
                 if (!isDeleted)
                 {
-                    TempData["error"] = "Có lỗi đã xảy ra khi xóa chủ đề!";
+                    TempData["error"] = "An error occurred while deleting the topic!";
                     return RedirectToAction("Index");
                 }
 
-                // Thông báo thành công
-                TempData["success"] = "Xóa chủ đề thành công!";
+                
+                TempData["success"] = "Remove Topic Successfully!";
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
                 // Ghi log lỗi nếu cần thiết
-                TempData["error"] = $"Đã xảy ra lỗi không mong muốn: {ex.Message}";
+                TempData["error"] = $"An unexpected error occurred! : {ex.Message}";
                 return RedirectToAction("Index");
             }
         }
