@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BDE73566-B9D7-4EA2-B515-0BC2F338D67E}|Doctors_Web_Forum.Web\\Doctors_Web_Forum.Web.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.web\\areas\\admin\\views\\shared\\_sidebarpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BDE73566-B9D7-4EA2-B515-0BC2F338D67E}|Doctors_Web_Forum.Web\\Doctors_Web_Forum.Web.csproj|solutionrelative:doctors_web_forum.web\\areas\\admin\\views\\shared\\_sidebarpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BDE73566-B9D7-4EA2-B515-0BC2F338D67E}|Doctors_Web_Forum.Web\\Doctors_Web_Forum.Web.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.web\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BDE73566-B9D7-4EA2-B515-0BC2F338D67E}|Doctors_Web_Forum.Web\\Doctors_Web_Forum.Web.csproj|solutionrelative:doctors_web_forum.web\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDE73566-B9D7-4EA2-B515-0BC2F338D67E}|Doctors_Web_Forum.Web\\Doctors_Web_Forum.Web.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.web\\areas\\admin\\views\\shared\\_sidebarpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BDE73566-B9D7-4EA2-B515-0BC2F338D67E}|Doctors_Web_Forum.Web\\Doctors_Web_Forum.Web.csproj|solutionrelative:doctors_web_forum.web\\areas\\admin\\views\\shared\\_sidebarpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BDE73566-B9D7-4EA2-B515-0BC2F338D67E}|Doctors_Web_Forum.Web\\Doctors_Web_Forum.Web.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.web\\areas\\admin\\views\\shared\\_notificationpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -19,16 +19,16 @@
       "RelativeMoniker": "D:0:0:{BDE73566-B9D7-4EA2-B515-0BC2F338D67E}|Doctors_Web_Forum.Web\\Doctors_Web_Forum.Web.csproj|solutionrelative:doctors_web_forum.web\\areas\\admin\\views\\topics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BDE73566-B9D7-4EA2-B515-0BC2F338D67E}|Doctors_Web_Forum.Web\\Doctors_Web_Forum.Web.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.web\\areas\\admin\\controllers\\topicscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDE73566-B9D7-4EA2-B515-0BC2F338D67E}|Doctors_Web_Forum.Web\\Doctors_Web_Forum.Web.csproj|solutionrelative:doctors_web_forum.web\\areas\\admin\\controllers\\topicscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BDE73566-B9D7-4EA2-B515-0BC2F338D67E}|Doctors_Web_Forum.Web\\Doctors_Web_Forum.Web.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.web\\areas\\admin\\views\\topics\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BDE73566-B9D7-4EA2-B515-0BC2F338D67E}|Doctors_Web_Forum.Web\\Doctors_Web_Forum.Web.csproj|solutionrelative:doctors_web_forum.web\\areas\\admin\\views\\topics\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BDE73566-B9D7-4EA2-B515-0BC2F338D67E}|Doctors_Web_Forum.Web\\Doctors_Web_Forum.Web.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.web\\areas\\admin\\views\\topics\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BDE73566-B9D7-4EA2-B515-0BC2F338D67E}|Doctors_Web_Forum.Web\\Doctors_Web_Forum.Web.csproj|solutionrelative:doctors_web_forum.web\\areas\\admin\\views\\topics\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BDE73566-B9D7-4EA2-B515-0BC2F338D67E}|Doctors_Web_Forum.Web\\Doctors_Web_Forum.Web.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.web\\areas\\admin\\controllers\\topicscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BDE73566-B9D7-4EA2-B515-0BC2F338D67E}|Doctors_Web_Forum.Web\\Doctors_Web_Forum.Web.csproj|solutionrelative:doctors_web_forum.web\\areas\\admin\\controllers\\topicscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BDE73566-B9D7-4EA2-B515-0BC2F338D67E}|Doctors_Web_Forum.Web\\Doctors_Web_Forum.Web.csproj|c:\\users\\admin\\desktop\\doctors_web_forum\\doctors_web_forum\\doctors_web_forum.web\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -80,64 +80,53 @@
               "RelativeDocumentMoniker": "Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Shared\\_NotificationPartial.cshtml",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Shared\\_NotificationPartial.cshtml",
               "RelativeToolTip": "Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Shared\\_NotificationPartial.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-18T03:59:11.875Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "_SidebarPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Shared\\_SidebarPartial.cshtml",
               "RelativeDocumentMoniker": "Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Shared\\_SidebarPartial.cshtml",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Shared\\_SidebarPartial.cshtml",
               "RelativeToolTip": "Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Shared\\_SidebarPartial.cshtml",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAAEAAAAARAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAD8AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-18T03:04:42.11Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAAAFcAAABGAAAA",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml*",
+              "RelativeToolTip": "Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml*",
+              "ViewState": "AQIAANsAAAAAAAAAAAAAAPkAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-17T08:31:49.411Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.Web\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "Doctors_Web_Forum.Web\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.Web\\appsettings.Development.json",
-              "RelativeToolTip": "Doctors_Web_Forum.Web\\appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-17T02:00:17.471Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "TopicsController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.Web\\Areas\\Admin\\Controllers\\TopicsController.cs",
               "RelativeDocumentMoniker": "Doctors_Web_Forum.Web\\Areas\\Admin\\Controllers\\TopicsController.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.Web\\Areas\\Admin\\Controllers\\TopicsController.cs",
               "RelativeToolTip": "Doctors_Web_Forum.Web\\Areas\\Admin\\Controllers\\TopicsController.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAowAwAAAAJAAAA",
+              "ViewState": "AQIAAHwAAAAAAAAAAAAwwIgAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T01:35:54.416Z"
+              "WhenOpened": "2024-12-16T01:35:54.416Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Topics\\Create.cshtml",
               "RelativeDocumentMoniker": "Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Topics\\Create.cshtml",
@@ -155,13 +144,26 @@
               "RelativeDocumentMoniker": "Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Topics\\Index.cshtml",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Topics\\Index.cshtml",
               "RelativeToolTip": "Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Topics\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAwwDIAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-16T01:32:18.153Z"
+              "WhenOpened": "2024-12-16T01:32:18.153Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.Web\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Doctors_Web_Forum.Web\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.Web\\appsettings.Development.json",
+              "RelativeToolTip": "Doctors_Web_Forum.Web\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-17T02:00:17.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Doctors_Web_Forum\\Doctors_Web_Forum\\Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Topics\\Edit.cshtml",
               "RelativeDocumentMoniker": "Doctors_Web_Forum.Web\\Areas\\Admin\\Views\\Topics\\Edit.cshtml",

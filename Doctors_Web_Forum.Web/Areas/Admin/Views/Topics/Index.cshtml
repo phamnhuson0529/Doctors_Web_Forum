@@ -16,11 +16,11 @@
 
 
 <div class="row mb-3">
-   
+
     <div class="col-md-4 text-start">
         <a asp-action="Create" class="btn btn-primary">Create New Topic</a>
     </div>
-    
+
     <div class="form-inline col-md-8">
         <form method="get" asp-action="Index">
             <input type="text" class="form-control me-2" name="searchTerm" value="@ViewBag.SearchTerm" placeholder="Search By Topic Name..." />
@@ -54,7 +54,10 @@
                     <td>
                         <a asp-action="Details" asp-route-id="@topic.Id" class="btn btn-info btn-sm">Details</a>
                         <a asp-action="Edit" asp-route-id="@topic.Id" class="btn btn-warning btn-sm">Edit</a>
-                        <a asp-action="Delete" asp-route-id="@topic.Id" class="btn btn-danger btn-sm">Delete</a>
+                        <a asp-action="Delete" asp-route-id="@topic.Id" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this topic?');">
+                            Delete
+                        </a>
+
                     </td>
                 </tr>
             }
