@@ -5,11 +5,11 @@ using Microsoft.AspNetCore.Mvc;
 namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class TopicsController : Controller
+    public class TopicController : Controller
     {
         private readonly ITopicService _topicService;
 
-        public TopicsController(ITopicService topicService)
+        public TopicController(ITopicService topicService)
         {
             _topicService = topicService;
         }

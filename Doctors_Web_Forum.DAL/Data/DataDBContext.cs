@@ -1,4 +1,5 @@
 ﻿using Doctors_Web_Forum.DAL.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Doctors_Web_Forum.DAL.Data
 {
-    public class DataDBContext : DbContext
+    public class DataDBContext : IdentityDbContext<User>
     {
         public DataDBContext(DbContextOptions<DataDBContext> options) : base(options) { }
 
@@ -23,7 +24,7 @@ namespace Doctors_Web_Forum.DAL.Data
 
         public DbSet<LoginAttempt> LoginAttempts { get; set; }
 
-        public DbSet<User> Users { get; set; }
+        
 
         public DbSet<AdminLog> AdminLogs { get; set; }  
  
