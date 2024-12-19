@@ -42,7 +42,7 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
 
                 if (result.Succeeded)
                 {
-                    
+                    TempData["success"] = "Đăng Nhập thành công!";
                     return Redirect(loginVM.ReturnUrl ?? "/Admin/Dashboard/Index");
                 }
 
@@ -99,7 +99,11 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
 
 
            
-
+        public async Task<IActionResult> Logout(string returnUrl = "/Admin/Account/Login")
+        {
+            await _signInManager.SignOutAsync();
+            return Redirect(returnUrl);
+        }
 
     }
 }

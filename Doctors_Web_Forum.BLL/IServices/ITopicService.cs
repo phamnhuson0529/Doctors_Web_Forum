@@ -9,7 +9,7 @@ namespace Doctors_Web_Forum.BLL.IServices
 {
     public interface ITopicService
     {
-        Task<(IEnumerable<Topic>topics , Paginate pager )> GetAllTopicsAsync(int pg , int pageSize = 5, string searchTerm = "");       // Method GetAll Topics 
+        Task<(IEnumerable<Topic> topics, Paginate pager)> GetAllTopicsAsync(int pg, int pageSize = 5, string searchTerm = "");       // Method GetAll Topics 
         Task<Topic> GetTopicByIdAsync(int id);              // Method GetTopicById 
         Task AddTopicAsync(Topic topic);                    // Method Add Method New
         Task UpdateTopicAsync(Topic topic);                 // Method Update Topic 
