@@ -29,7 +29,7 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Tìm user theo email
+                
                 var user = await _userManager.FindByEmailAsync(loginVM.Email);
                 if (user == null)
                 {
@@ -37,16 +37,16 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
                     return View(loginVM);
                 }
 
-                // Đăng nhập người dùng
+                
                 var result = await _signInManager.PasswordSignInAsync(user, loginVM.Password,false,false);
 
                 if (result.Succeeded)
                 {
-                    // Chuyển hướng tới ReturnUrl nếu có, hoặc về trang Dashboard mặc định
+                    
                     return Redirect(loginVM.ReturnUrl ?? "/Admin/Dashboard/Index");
                 }
 
-                // Nếu đăng nhập thất bại
+               
                 ModelState.AddModelError("", "Invalid Email and Password!");
             }
 
