@@ -1909,7 +1909,10 @@
           "Doctors_Web_Forum.DAL": "1.0.0"
         },
         "runtime": {
-          "Doctors_Web_Forum.BLL.dll": {}
+          "Doctors_Web_Forum.BLL.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Doctors_Web_Forum.DAL/1.0.0": {
@@ -1917,7 +1920,10 @@
           "Microsoft.EntityFrameworkCore": "8.0.10"
         },
         "runtime": {
-          "Doctors_Web_Forum.DAL.dll": {}
+          "Doctors_Web_Forum.DAL.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
