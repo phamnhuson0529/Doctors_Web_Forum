@@ -1,5 +1,5 @@
 ﻿@using Doctors_Web_Forum.DAL.Models
-@model Login
+@model RegisterModel
 
 <div class="login-box">
     <div class="login-logo">
@@ -8,6 +8,8 @@
     <!-- /.login-logo -->
     <div class="login-box-body">
         <p class="login-box-msg">Register to start your admin session</p>
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
         <form asp-action="Create" asp-controller="Account" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -34,7 +36,7 @@
                 <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
             </div>
             <div class="text-center">
-                <p>Đã có tài khoản? <a asp-controller="Account" asp-action="Index">Login</a></p>
+                <p>Đã có tài khoản? <a asp-controller="Account" asp-action="Login">Login</a></p>
             </div>
 
         </form>
