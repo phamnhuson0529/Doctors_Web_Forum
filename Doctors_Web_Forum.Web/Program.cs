@@ -36,7 +36,7 @@ builder.Services.Configure<IdentityOptions>(options =>
 {
     // Password settings.
     options.Password.RequireDigit = true;
-    options.Password.RequireLowercase = true;
+    options.Password.RequireLowercase = false;
     options.Password.RequireNonAlphanumeric = false;
     options.Password.RequireUppercase = false;
     options.Password.RequiredLength = 1;
@@ -51,7 +51,7 @@ var app = builder.Build();
 
 app.MapControllerRoute(
     name: "Areas",
-    pattern: "{area:exists}/{controller=Account}/{action=Index}/{id?}");
+    pattern: "{area:exists}/{controller=Account}/{action=Login}/{id?}");
 
 
 // Configure the HTTP request pipeline.

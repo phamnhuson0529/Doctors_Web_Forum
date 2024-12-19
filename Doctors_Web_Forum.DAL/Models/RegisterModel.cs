@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace Doctors_Web_Forum.DAL.Models
 {
-    public class Login
+    public class RegisterModel
     {
-        [Required(ErrorMessage = "Please enter email to login !"),EmailAddress]
+        [Required(ErrorMessage = "Please enter email to register !"),EmailAddress]
         public string? Email { get; set; }
         [Required(ErrorMessage ="Please enter Username !")]
         public string ? Username { get; set; }
 
-        [Required(ErrorMessage ="Please enter password to login !")]
-        [DataType(DataType.Password)]
+        [Required(ErrorMessage ="Please enter password to Register !")]
+       
         public string? Password { get; set; }
-        public bool RememberMe { get; set; }
+       
     }
 }

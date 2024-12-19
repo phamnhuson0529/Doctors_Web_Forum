@@ -1,5 +1,5 @@
 ﻿@using Doctors_Web_Forum.DAL.Models
-@model Login
+@model Doctors_Web_Forum.DAL.Models.ViewModel.LoginViewModel
 
 <div class="login-box">
     <div class="login-logo">
@@ -8,7 +8,7 @@
     <!-- /.login-logo -->
     <div class="login-box-body">
         <p class="login-box-msg">Login in to start your admin session</p>
-
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <form asp-action="Login" asp-controller="Account" method="post">
             <div class="form-group has-feedback">
                 <input asp-for="Email" class="form-control" placeholder="Email" />
@@ -22,13 +22,13 @@
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
+            @* <div class="form-group">
                 <div class="form-inline">
                     <label>
-                        <input asp-for="RememberMe" type="checkbox" /> Remember Me
+                        <input type="checkbox" /> Remember Me
                     </label>
                 </div>
-            </div>
+            </div> *@
 
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
