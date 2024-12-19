@@ -27,39 +27,39 @@ namespace Doctors_Web_Forum.BLL.Services
         }
 
 
-        
+
 
         // GetAll Topics
 
-        public async Task<(IEnumerable<Topic>topics ,Paginate pager)> GetAllTopicsAsync(int pg , int pageSize = 5 , string searchTerm = "")
+        public async Task<(IEnumerable<Topic> topics, Paginate pager)> GetAllTopicsAsync(int pg, int pageSize = 5, string searchTerm = "")
         {
             if (pg <= 0) pg = 1;
 
-            
+
             var topicsQuery = _dataDBContext.Topics.AsQueryable();
 
-            
+
             if (!string.IsNullOrEmpty(searchTerm))
             {
                 topicsQuery = topicsQuery.Where(t => t.TopicName.Contains(searchTerm));
             }
 
-            
+
             topicsQuery = topicsQuery.OrderByDescending(t => t.Id);
 
-            
+
             int recsCount = await topicsQuery.CountAsync();
 
-            
+
             var pager = new Paginate(recsCount, pg, pageSize);
 
-            
+
             int recSkip = (pg - 1) * pageSize;
 
-            
+
             var data = await topicsQuery.Skip(recSkip).Take(pageSize).ToListAsync();
 
-            
+
             return (data, pager);
         }
 

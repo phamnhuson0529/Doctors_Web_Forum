@@ -22,6 +22,8 @@ builder.Services.AddDbContext<DataDBContext>(options => options.UseSqlServer(bui
 
 builder.Services.AddScoped<ITopicService,TopicService>();
 
+builder.Services.AddScoped<IUserService, UserService>();
+
 
 
 
