@@ -30,7 +30,6 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Answer\" />
     <Folder Include="Areas\Admin\Views\AdminLog\" />
-    <Folder Include="Areas\Admin\Views\User\" />
     <Folder Include="Areas\Admin\Views\Profile\" />
     <Folder Include="Areas\Admin\Views\Question\" />
     <Folder Include="Views\Topic\" />

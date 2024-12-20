@@ -1,6 +1,8 @@
 ﻿using Doctors_Web_Forum.BLL.IServices;
 using Doctors_Web_Forum.BLL.Services;
 using Doctors_Web_Forum.DAL.Data;
+using Doctors_Web_Forum.DAL.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -20,6 +22,29 @@ builder.Services.AddDbContext<DataDBContext>(options => options.UseSqlServer(bui
 
 builder.Services.AddScoped<ITopicService,TopicService>();
 
+builder.Services.AddScoped<IUserService, UserService>();
+
+
+
+
+// Service Identity 
+
+
+builder.Services.AddIdentity<User,IdentityRole>()
+    .AddEntityFrameworkStores<DataDBContext>().AddDefaultTokenProviders();
+
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    // Password settings.
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequiredLength = 1;
+    options.User.RequireUniqueEmail = true;
+});
+
 
 
 var app = builder.Build();
@@ -28,7 +53,7 @@ var app = builder.Build();
 
 app.MapControllerRoute(
     name: "Areas",
-    pattern: "{area:exists}/{controller=Topics}/{action=Index}/{id?}");
+    pattern: "{area:exists}/{controller=Account}/{action=Login}/{id?}");
 
 
 // Configure the HTTP request pipeline.
@@ -36,10 +61,16 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
 }
+
+
+
 app.UseStaticFiles();
 
 app.UseRouting();
 
+// Access
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

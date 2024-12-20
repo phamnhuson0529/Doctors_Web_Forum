@@ -1,6 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿
 @{
 }
 @model Doctors_Web_Forum.DAL.Models.Topic
@@ -36,7 +34,7 @@
 
         <div class="form-group">
             <button type="submit" class="btn btn-primary">Create Topic</button>
-            <a href="@Url.Action("Index", "Topics", new { area = "Admin" })" class="btn btn-secondary">Cancel</a>
+            <a href="@Url.Action("Index", "Topic", new { area = "Admin" })" class="btn btn-secondary">Cancel</a>
         </div>
     </form>
 </div>
@@ -44,5 +42,8 @@
 
 
 @section Scripts {
-    <partial name="_ValidationScriptsPartial" />
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
 }
