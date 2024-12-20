@@ -1,0 +1,76 @@
+﻿/* Toàn bộ phần Header */
+header {
+    font-family: Arial, sans-serif;
+    background-color: #fffbeb; /* Nền vàng nhạt */
+}
+
+/* Navbar chính */
+.navbar {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa logo và chữ */
+}
+
+    .navbar-brand img {
+        max-height: 50px;
+    }
+
+/* Search Box */
+.input-group {
+    width: 50%;
+}
+
+.navbar form {
+    flex: 1;
+    margin-right: auto;
+}
+
+/* Nút Sign Up và Login */
+.navbar .btn-primary,
+.navbar .btn-secondary {
+    padding: 10px 20px;
+}
+
+/* Thanh navbar dưới */
+.navbar.bg-primary {
+    margin-top: -1px; /* Để khít với thanh trên */
+    padding: 10px 20px;
+    background-color: #003366; /* Xanh đậm */
+}
+
+    .navbar.bg-primary ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style: none; /* Xóa dấu chấm tròn */
+        gap: 20px; /* Khoảng cách giữa các mục */
+    }
+
+        .navbar.bg-primary ul li {
+            list-style: none;
+        }
+
+            .navbar.bg-primary ul li a {
+                color: #ffcc00; /* Vàng nổi bật */
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+
+                .navbar.bg-primary ul li a:hover {
+                    text-decoration: underline;
+                    color: #ffffff; /* Khi hover, chuyển thành trắng */
+                }
+.navbar-brand img {
+    max-height: 50px; /* Đặt chiều cao tối đa */
+    width: auto; /* Giữ tỉ lệ hình ảnh */
+    margin-right: 10px; /* Khoảng cách giữa logo và văn bản */
+}
+

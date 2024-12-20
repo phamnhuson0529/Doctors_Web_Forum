@@ -7,29 +7,49 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Doctors_Web_Forum.Web.styles.css" asp-append-version="true" />
+   <link rel="stylesheet" href="~/user/css/header.css" asp-append-version="true" />
+
+
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Doctors_Web_Forum.Web</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+        <nav class="navbar navbar-light bg-light border-bottom py-3">
+            <div class="container-fluid d-flex align-items-center justify-content-between">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="/">
+                    <img src="~/user/images/logo.jpg" alt="HealthBoards Logo" style="height: 50px;">
+                    <span class="fw-bold ms-2">HealthBoards</span>
+                </a>
+                <!-- Search Box -->
+                <form class="input-group w-50 me-auto ms-3">
+                    <input class="form-control" type="search" placeholder="Search HealthBoards" aria-label="Search">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+                <!-- Buttons -->
+                <div class="d-flex ms-3">
+                    <button class="btn btn-primary me-2">Sign Up</button>
+                    <button class="btn btn-secondary">Login</button>
                 </div>
             </div>
         </nav>
+        <div class="navbar bg-primary">
+            <div class="container-fluid">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Message Boards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Drug Talk</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
+
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

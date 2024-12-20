@@ -1,0 +1,117 @@
+﻿/* forums-home.css */
+.forums-home {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Main content - Sidebar */
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Banner Section */
+.banner {
+    grid-column: 1 / -1;
+    text-align: center;
+    background-color: #f7f9fc;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+    .banner h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .banner p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .banner .btn {
+        background-color: #00468B;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+/* Popular Topics Section */
+.popular-topics {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.topics-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.topic-item {
+    flex: 1 1 calc(25% - 15px);
+    text-align: center;
+}
+
+    .topic-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .topic-item p {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+/* Recent Posts Section */
+.recent-posts {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+    .recent-posts ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .recent-posts li {
+        margin-bottom: 15px;
+    }
+
+        .recent-posts li a {
+            font-weight: bold;
+            color: #00468B;
+            text-decoration: none;
+        }
+
+/* Sidebar Section */
+.sidebar {
+    background: #f7f9fc;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+    .sidebar .signup-box {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .sidebar .quick-links ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .sidebar .quick-links ul li a {
+            color: #00468B;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
