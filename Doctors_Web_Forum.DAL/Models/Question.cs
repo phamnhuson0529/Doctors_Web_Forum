@@ -13,10 +13,27 @@ namespace Doctors_Web_Forum.DAL.Models
     {
         [Key]
         public int Id { get; set; }
-        public int UserId { get; set; }
-        public int TopicId { get; set; }
+
+        [Required]
+        public string UserId { get; set; } // Foreign Key đến bảng Users
+
+        [ForeignKey("UserId")]
+        public virtual User? User { get; set; } // Navigation property đến User
+
+        [Required]
+        public int TopicId { get; set; } // Foreign Key đến bảng Topics
+
+        [ForeignKey("TopicId")]
+        public virtual Topic? Topic { get; set; } 
+
+        [Required(ErrorMessage = "Question text is required.")]
+        [StringLength(1000, ErrorMessage = "Question cannot exceed 1000 characters.")]
         public string? QuestionText { get; set; }
-        public DateTime PostDate { get; set; }
-        public bool Status { get; set; }
+
+        public DateTime PostDate { get; set; } = DateTime.Now;
+
+        public bool Status { get; set; } = true; // Default là true
+
+        public virtual ICollection<Answer>? Answers { get; set; }
     }
 }
