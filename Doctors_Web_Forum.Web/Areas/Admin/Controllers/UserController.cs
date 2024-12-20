@@ -37,18 +37,24 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+            var roles = _roleManager.Roles.ToList();
+            ViewBag.Roles = new SelectList(roles, "Name", "Name");
             return View();
         }
 
 
+
         [HttpPost]
-        
-        public async Task<IActionResult> Create(User model, string password, string role)
+        public async Task<IActionResult> Create(User model, string role)
         {
-            if (ModelState.IsValid)
-            {
+           
+            var roles = _roleManager.Roles.ToList();
+            ViewBag.Roles = new SelectList(roles, "Name", "Name");
+
+            //if (ModelState.IsValid)
+            
                 // Gọi dịch vụ để tạo người dùng, truyền role vào
-                var result = await _userService.CreateUserAsync(model, password, role);
+                var result = await _userService.CreateUserAsync(model, role);
 
                 // Kiểm tra kết quả trả về
                 if (result)
@@ -60,11 +66,13 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
                 {
                     TempData["error"] = "Failed to create user.";
                 }
-            }
-
             
+
+            // Nếu có lỗi thì trả về view hiện tại với model và danh sách role
             return View(model);
         }
+
+
 
 
         [HttpGet]

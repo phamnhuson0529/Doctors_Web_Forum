@@ -55,26 +55,31 @@ namespace Doctors_Web_Forum.BLL.Services
             return await _userManager.FindByIdAsync(id);
         }
 
-        public async Task<bool> CreateUserAsync(User user, string password, string role)
+        public async Task<bool> CreateUserAsync(User model, string role)
         {
-            // Kiểm tra nếu mật khẩu không trống
-            if (string.IsNullOrWhiteSpace(password))
+            var user = new User
             {
-                throw new ArgumentException("Password cannot be empty.");
-            }
+                UserName = model.UserName,
+                Email = model.Email,
+                PasswordHash = model.PasswordHash,
+                PhoneNumber = model.PhoneNumber,
+                Address = model.Address,
+                Status = model.Status,
+                Role = role
+            };
 
-            var result = await _userManager.CreateAsync(user, password);
+            var result = await _userManager.CreateAsync(user);
+
             if (result.Succeeded)
             {
-                // Nếu người dùng được tạo thành công, gán vai trò cho người dùng
-                if (!string.IsNullOrEmpty(role))
-                {
-                    await AddUserToRoleAsync(user.Id, role);
-                }
+                // Gán vai trò cho người dùng
+                await _userManager.AddToRoleAsync(user, role);
                 return true;
             }
+
             return false;
         }
+
 
         public async Task<bool> UpdateUserAsync(User user)
         {
