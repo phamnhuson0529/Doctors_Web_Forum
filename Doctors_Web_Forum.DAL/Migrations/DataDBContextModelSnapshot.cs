@@ -159,6 +159,9 @@ namespace Doctors_Web_Forum.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("PostDate")
                         .HasColumnType("datetime2");
 

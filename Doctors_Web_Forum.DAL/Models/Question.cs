@@ -28,8 +28,9 @@ namespace Doctors_Web_Forum.DAL.Models
 
         [Required(ErrorMessage = "Question text is required.")]
         [StringLength(1000, ErrorMessage = "Question cannot exceed 1000 characters.")]
-        public string? QuestionText { get; set; }
+        public string QuestionText { get; set; }
 
+        public string? Description {  get; set; }
         public DateTime PostDate { get; set; } = DateTime.Now;
 
         public bool Status { get; set; } = true; // Default là true

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Doctors_Web_Forum.DAL.Migrations
 {
     [DbContext(typeof(DataDBContext))]
-    [Migration("20241220155104_AddQuestionAnwersTopicUserRelationsRestrict")]
+    [Migration("20241220161906_AddQuestionAnwersTopicUserRelationsRestrict")]
     partial class AddQuestionAnwersTopicUserRelationsRestrict
     {
         /// <inheritdoc />
@@ -161,6 +161,9 @@ namespace Doctors_Web_Forum.DAL.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("PostDate")
                         .HasColumnType("datetime2");
