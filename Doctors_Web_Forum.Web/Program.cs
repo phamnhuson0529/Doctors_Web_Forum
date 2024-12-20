@@ -24,6 +24,8 @@ builder.Services.AddScoped<ITopicService,TopicService>();
 
 builder.Services.AddScoped<IUserService, UserService>();
 
+builder.Services.AddScoped<IRoleService, RoleService>();
+
 
 
 
