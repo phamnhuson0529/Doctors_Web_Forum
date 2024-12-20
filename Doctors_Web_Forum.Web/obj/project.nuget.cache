@@ -1,10 +1,14 @@
 {
   "version": 2,
 <<<<<<< HEAD
+<<<<<<< HEAD
   "dgSpecHash": "aws9j1HMhxw=",
 =======
   "dgSpecHash": "ZSkO7kflkYI=",
 >>>>>>> 21fc568672c6ccd44d60f12f660a4fc6ca831901
+=======
+  "dgSpecHash": "ZSkO7kflkYI=",
+>>>>>>> origin
   "success": true,
   "projectFilePath": "C:\\Users\\ADMIN\\source\\repos\\Doctors_Web_Forum\\Doctors_Web_Forum.Web\\Doctors_Web_Forum.Web.csproj",
   "expectedPackageFiles": [

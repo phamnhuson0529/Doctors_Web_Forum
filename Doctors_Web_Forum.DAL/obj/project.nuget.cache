@@ -1,13 +1,18 @@
 {
   "version": 2,
 <<<<<<< HEAD
+<<<<<<< HEAD
   "dgSpecHash": "fEsv+eWKVBQ=",
 =======
   "dgSpecHash": "RmZdyr0E2oY=",
 >>>>>>> 21fc568672c6ccd44d60f12f660a4fc6ca831901
+=======
+  "dgSpecHash": "RmZdyr0E2oY=",
+>>>>>>> origin
   "success": true,
   "projectFilePath": "C:\\Users\\ADMIN\\source\\repos\\Doctors_Web_Forum\\Doctors_Web_Forum.DAL\\Doctors_Web_Forum.DAL.csproj",
   "expectedPackageFiles": [
+<<<<<<< HEAD
 <<<<<<< HEAD
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.10\\microsoft.entityframeworkcore.8.0.10.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.10\\microsoft.entityframeworkcore.abstractions.8.0.10.nupkg.sha512",
@@ -21,6 +26,8 @@
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
 =======
+=======
+>>>>>>> origin
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -102,7 +109,10 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+<<<<<<< HEAD
 >>>>>>> 21fc568672c6ccd44d60f12f660a4fc6ca831901
+=======
+>>>>>>> origin
   ],
   "logs": []
 }

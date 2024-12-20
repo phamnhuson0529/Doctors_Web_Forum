@@ -29,6 +29,7 @@ build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [C:/Users/ADMIN/source/repos/Doctors_Web_Forum/Doctors_Web_Forum.Web/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,6 +39,18 @@ build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxQcml2
 =======
 [C:/Users/Admin/Desktop/Doctors_Web_Forum/Doctors_Web_Forum/Doctors_Web_Forum.Web/Areas/Admin/Views/Account/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxDcmVhdGUuY3NodG1s
+=======
+[C:/Users/Admin/Desktop/Doctors_Web_Forum/Doctors_Web_Forum/Doctors_Web_Forum.Web/Areas/Admin/Views/Account/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/Doctors_Web_Forum/Doctors_Web_Forum/Doctors_Web_Forum.Web/Areas/Admin/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/Doctors_Web_Forum/Doctors_Web_Forum/Doctors_Web_Forum.Web/Areas/Admin/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+>>>>>>> origin
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Admin/Desktop/Doctors_Web_Forum/Doctors_Web_Forum/Doctors_Web_Forum.Web/Areas/Admin/Views/Account/Login.cshtml]
@@ -70,6 +83,7 @@ build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9W
 build_metadata.AdditionalFiles.CssScope = 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [C:/Users/ADMIN/source/repos/Doctors_Web_Forum/Doctors_Web_Forum.Web/Areas/Admin/Views/Topics/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVG9waWNzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -87,6 +101,26 @@ build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVG9waWNzXElu
 =======
 [C:/Users/Admin/Desktop/Doctors_Web_Forum/Doctors_Web_Forum/Doctors_Web_Forum.Web/Areas/Admin/Views/Topic/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVG9waWNcQ3JlYXRlLmNzaHRtbA==
+=======
+[C:/Users/Admin/Desktop/Doctors_Web_Forum/Doctors_Web_Forum/Doctors_Web_Forum.Web/Areas/Admin/Views/Topic/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVG9waWNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/Doctors_Web_Forum/Doctors_Web_Forum/Doctors_Web_Forum.Web/Areas/Admin/Views/Topic/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVG9waWNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/Doctors_Web_Forum/Doctors_Web_Forum/Doctors_Web_Forum.Web/Areas/Admin/Views/Topic/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVG9waWNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/Doctors_Web_Forum/Doctors_Web_Forum/Doctors_Web_Forum.Web/Areas/Admin/Views/Topic/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVG9waWNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/Doctors_Web_Forum/Doctors_Web_Forum/Doctors_Web_Forum.Web/Areas/Admin/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+>>>>>>> origin
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Admin/Desktop/Doctors_Web_Forum/Doctors_Web_Forum/Doctors_Web_Forum.Web/Areas/Admin/Views/Topic/Details.cshtml]
