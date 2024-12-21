@@ -1,5 +1,35 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model Doctors_Web_Forum.DAL.Models.Question
+
 @{
+    ViewBag.Title = "Chi tiết câu hỏi";
 }
+
+
+
+<!-- Hiển thị thông tin câu hỏi -->
+<div class="container">
+    <div>
+        <strong>Câu hỏi:</strong>
+        <p>@Model.QuestionText</p>
+
+        <strong>Mô tả:</strong>
+        <p>@Model.Description</p>
+
+        <strong>Chủ đề:</strong>
+        <p>@Model.Topic?.TopicName</p> <!-- Giả sử bạn đã có thuộc tính TopicName trong Topic model -->
+
+        <strong>Ngày đăng:</strong>
+        <p>@Model.PostDate.ToString("dd/MM/yyyy HH:mm")</p>
+
+        <strong>Trạng thái:</strong>
+        <p>@(Model.Status ? "Công khai" : "Đã đóng")</p>
+
+        <strong>Người tạo:</strong>
+        <p>@ViewBag.UserName (@ViewBag.UserEmail)</p>
+
+        
+    </div>
+
+    <hr />
+</div>
+

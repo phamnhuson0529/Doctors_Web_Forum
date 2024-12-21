@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
@@ -15,13 +15,13 @@ namespace Doctors_Web_Forum.DAL.Models
         public int Id { get; set; }
 
         [Required]
-        public string UserId { get; set; } // Foreign Key đến bảng Users
+        public string UserId { get; set; } 
 
         [ForeignKey("UserId")]
-        public virtual User? User { get; set; } // Navigation property đến User
+        public virtual User? User { get; set; } 
 
         [Required]
-        public int TopicId { get; set; } // Foreign Key đến bảng Topics
+        public int TopicId { get; set; } 
 
         [ForeignKey("TopicId")]
         public virtual Topic? Topic { get; set; } 
@@ -33,7 +33,7 @@ namespace Doctors_Web_Forum.DAL.Models
         public string? Description {  get; set; }
         public DateTime PostDate { get; set; } = DateTime.Now;
 
-        public bool Status { get; set; } = true; // Default là true
+        public bool Status { get; set; } = true; 
 
         public virtual ICollection<Answer>? Answers { get; set; }
     }
