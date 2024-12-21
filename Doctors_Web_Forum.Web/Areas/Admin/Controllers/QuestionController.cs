@@ -21,12 +21,20 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
         }
 
         // GET: Admin/Question/Index
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int pg = 1, int pageSize = 5, string searchTerm = "")
         {
-            var questions = await _questionService.GetAllQuestionsAsync();
+            // Gọi service để lấy danh sách câu hỏi với phân trang
+            var (questions, pager) = await _questionService.GetAllQuestionsAsync(pg, pageSize, searchTerm);
+
+            // Truyền thông tin phân trang và tìm kiếm về view
+            ViewBag.Pager = pager;
+            ViewBag.SearchTerm = searchTerm; // Truyền từ khóa tìm kiếm
+
+            // Trả về danh sách câu hỏi và phân trang sang view
             return View(questions);
         }
 
+        // GET: Admin/Question/Details/5
         // GET: Admin/Question/Details/5
         public async Task<IActionResult> Details(int id)
         {
@@ -37,28 +45,41 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            var user = await _userManager.FindByIdAsync(question.UserId.ToString());
+            // Lấy thông tin người tạo câu hỏi
+            var user = await _userManager.FindByIdAsync(question.UserId);
             ViewBag.UserName = user?.UserName ?? "Người dùng không tồn tại";
+            ViewBag.UserEmail = user?.Email ?? "Email không có sẵn"; // Lấy email người tạo câu hỏi
 
+           
+
+           
             return View(question);
         }
+
+
 
         // GET: Admin/Question/Create
         public async Task<IActionResult> Create()
         {
-            await PopulateTopicsViewBag();
+            await PopulateTopicsViewBag(); // Lấy thông tin chủ đề
             return View();
         }
 
         // POST: Admin/Question/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("UserId, TopicId, QuestionText, Description")] Question question)
         {
-            if (!ModelState.IsValid)
+            //if (!ModelState.IsValid)
+            //{
+            //    await PopulateTopicsViewBag(); // Nếu dữ liệu không hợp lệ, giữ lại thông tin chủ đề
+            //    return View(question);
+            //}
+
+            // Lấy thông tin người dùng đang đăng câu hỏi từ UserManager
+            var user = await _userManager.GetUserAsync(User);
+            if (user != null)
             {
-                await PopulateTopicsViewBag();
-                return View(question);
+                question.UserId = user.Id; // Gán UserId cho câu hỏi
             }
 
             await _questionService.CreateQuestionAsync(question);
@@ -76,13 +97,13 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            await PopulateTopicsViewBag();
+            await PopulateTopicsViewBag(); // Lấy thông tin chủ đề
             return View(question);
         }
 
         // POST: Admin/Question/Edit/5
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        
         public async Task<IActionResult> Edit(int id, [Bind("Id, UserId, TopicId, QuestionText, Description, Status")] Question question)
         {
             if (id != question.Id)
@@ -91,11 +112,11 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            if (!ModelState.IsValid)
-            {
-                await PopulateTopicsViewBag();
-                return View(question);
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    await PopulateTopicsViewBag(); // Nếu dữ liệu không hợp lệ, giữ lại thông tin chủ đề
+            //    return View(question);
+            //}
 
             var updatedQuestion = await _questionService.UpdateQuestionAsync(id, question.QuestionText, question.Description, question.TopicId);
             if (updatedQuestion == null)
@@ -122,14 +143,14 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
-
-        // Helper: Populate ViewBag with topics
+        
         private async Task PopulateTopicsViewBag()
         {
             const int pageNumber = 1;
             const int pageSize = 5;
-            var topics = await _topicService.GetAllTopicsAsync(pageNumber, pageSize, string.Empty);
-            ViewBag.Topics = topics;
+            var (topics, pager) = await _topicService.GetAllTopicsAsync(pageNumber, pageSize, string.Empty);
+            ViewBag.Topics = topics;  // Lấy danh sách chủ đề từ tuple và chỉ truyền nó
         }
+
     }
 }

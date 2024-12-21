@@ -1,4 +1,5 @@
-﻿using Doctors_Web_Forum.BLL.IServices;
+﻿using Azure;
+using Doctors_Web_Forum.BLL.IServices;
 using Doctors_Web_Forum.DAL.Data;
 using Doctors_Web_Forum.DAL.Models;
 using Microsoft.EntityFrameworkCore;
@@ -12,26 +13,53 @@ namespace Doctors_Web_Forum.BLL.Services
 {
     public class QuestionService : IQuestionService
     {
-        private readonly DataDBContext _context;
+        private readonly DataDBContext _dataDBContext;  // Đảm bảo tên đúng cho biến context
 
-        public QuestionService(DataDBContext context)
+        // Constructor nhận DataDBContext
+        public QuestionService(DataDBContext dataDBContext)
         {
-            _context = context;
+            _dataDBContext = dataDBContext;  // Sửa lỗi sai tên biến trong constructor
         }
 
         // Lấy thông tin người đăng câu hỏi và chủ đề (tái sử dụng cho nhiều phương thức)
         private IQueryable<Question> GetQuestionsWithRelatedEntities()
         {
-            return _context.Questions
+            return _dataDBContext.Questions
                 .Include(q => q.User)  // Lấy thông tin người đăng câu hỏi
                 .Include(q => q.Topic); // Lấy thông tin chủ đề câu hỏi
         }
 
-        // Lấy tất cả câu hỏi
-        public async Task<IEnumerable<Question>> GetAllQuestionsAsync()
+        // Lấy tất cả câu hỏi với phân trang và tìm kiếm
+        public async Task<(IEnumerable<Question> questions, Paginate pager)> GetAllQuestionsAsync(int pg, int pageSize = 5, string searchTerm = "")
         {
-            return await GetQuestionsWithRelatedEntities().ToListAsync();
+            if (pg <= 0) pg = 1;
+
+            // Sử dụng phương thức helper để bao gồm các liên kết (nếu cần)
+            var questionsQuery = GetQuestionsWithRelatedEntities();
+
+            // Lọc theo từ khóa tìm kiếm
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                // Dùng các trường phù hợp từ model Question, ví dụ: QuestionText, Description
+                questionsQuery = questionsQuery.Where(q => q.QuestionText.Contains(searchTerm) || q.Description.Contains(searchTerm));
+            }
+
+            // Sắp xếp theo thứ tự giảm dần Id
+            questionsQuery = questionsQuery.OrderByDescending(q => q.Id);
+
+            // Tổng số bản ghi
+            int recsCount = await questionsQuery.CountAsync();
+
+            // Khởi tạo đối tượng phân trang
+            var pager = new Paginate(recsCount, pg, pageSize);
+
+            // Bỏ qua và lấy các bản ghi theo trang
+            int recSkip = (pg - 1) * pageSize;
+            var data = await questionsQuery.Skip(recSkip).Take(pageSize).ToListAsync();
+
+            return (data, pager);
         }
+
 
         // Lấy câu hỏi theo Id
         public async Task<Question> GetQuestionByIdAsync(int id)
@@ -43,18 +71,18 @@ namespace Doctors_Web_Forum.BLL.Services
         // Tạo câu hỏi mới
         public async Task<Question> CreateQuestionAsync(Question question)
         {
-            _context.Questions.Add(question);
-            await _context.SaveChangesAsync();
+            _dataDBContext.Questions.Add(question);
+            await _dataDBContext.SaveChangesAsync();
             return question;
         }
 
-        // Cập nhật câu hỏi
+       
         public async Task<Question> UpdateQuestionAsync(int id, string questionText, string description, int topicId)
         {
-            var question = await _context.Questions.FindAsync(id);
+            var question = await _dataDBContext.Questions.FindAsync(id);
             if (question == null)
             {
-                return null; // Nếu câu hỏi không tồn tại
+                return null; 
             }
 
             // Cập nhật các trường của câu hỏi
@@ -62,8 +90,8 @@ namespace Doctors_Web_Forum.BLL.Services
             question.Description = description;
             question.TopicId = topicId;
 
-            _context.Questions.Update(question);
-            await _context.SaveChangesAsync();
+            _dataDBContext.Questions.Update(question);
+            await _dataDBContext.SaveChangesAsync();
 
             return question;
         }
@@ -71,7 +99,7 @@ namespace Doctors_Web_Forum.BLL.Services
         // Kiểm tra sự tồn tại của câu hỏi trước khi xóa
         private async Task<Question> GetQuestionIfExistsAsync(int id)
         {
-            return await _context.Questions.FindAsync(id);
+            return await _dataDBContext.Questions.FindAsync(id);
         }
 
         // Xóa câu hỏi
@@ -83,8 +111,8 @@ namespace Doctors_Web_Forum.BLL.Services
                 return false; // Nếu câu hỏi không tồn tại
             }
 
-            _context.Questions.Remove(question);
-            await _context.SaveChangesAsync();
+            _dataDBContext.Questions.Remove(question);
+            await _dataDBContext.SaveChangesAsync();
             return true;
         }
     }
