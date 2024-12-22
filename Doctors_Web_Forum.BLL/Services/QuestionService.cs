@@ -1,5 +1,4 @@
-﻿using Azure;
-using Doctors_Web_Forum.BLL.IServices;
+﻿using Doctors_Web_Forum.BLL.IServices;
 using Doctors_Web_Forum.DAL.Data;
 using Doctors_Web_Forum.DAL.Models;
 using Microsoft.EntityFrameworkCore;
@@ -21,12 +20,13 @@ namespace Doctors_Web_Forum.BLL.Services
             _dataDBContext = dataDBContext;  // Sửa lỗi sai tên biến trong constructor
         }
 
-        // Lấy thông tin người đăng câu hỏi và chủ đề (tái sử dụng cho nhiều phương thức)
+        // Lấy thông tin người đăng câu hỏi, chủ đề và câu trả lời (tái sử dụng cho nhiều phương thức)
         private IQueryable<Question> GetQuestionsWithRelatedEntities()
         {
             return _dataDBContext.Questions
                 .Include(q => q.User)  // Lấy thông tin người đăng câu hỏi
-                .Include(q => q.Topic); // Lấy thông tin chủ đề câu hỏi
+                .Include(q => q.Topic)  // Lấy thông tin chủ đề câu hỏi
+                .Include(q => q.Answers);  // Lấy danh sách câu trả lời của câu hỏi
         }
 
         // Lấy tất cả câu hỏi với phân trang và tìm kiếm
@@ -60,8 +60,7 @@ namespace Doctors_Web_Forum.BLL.Services
             return (data, pager);
         }
 
-
-        // Lấy câu hỏi theo Id
+        // Lấy câu hỏi theo Id và bao gồm câu trả lời
         public async Task<Question> GetQuestionByIdAsync(int id)
         {
             return await GetQuestionsWithRelatedEntities()
@@ -76,13 +75,13 @@ namespace Doctors_Web_Forum.BLL.Services
             return question;
         }
 
-       
+        // Cập nhật câu hỏi
         public async Task<Question> UpdateQuestionAsync(int id, string questionText, string description, int topicId)
         {
             var question = await _dataDBContext.Questions.FindAsync(id);
             if (question == null)
             {
-                return null; 
+                return null;
             }
 
             // Cập nhật các trường của câu hỏi

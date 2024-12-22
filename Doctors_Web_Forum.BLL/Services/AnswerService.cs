@@ -40,6 +40,14 @@ namespace Doctors_Web_Forum.BLL.Services
                 .FirstOrDefaultAsync(a => a.Id == id);
         }
 
+        // Lấy tất cả câu trả lời cho một câu hỏi
+        public async Task<IEnumerable<Answer>> GetAnswersByQuestionIdAsync(int questionId)
+        {
+            return await GetAnswersWithRelatedEntities()
+                .Where(a => a.QuestionId == questionId) // Lọc câu trả lời theo QuestionId
+                .ToListAsync();
+        }
+
         // Tạo câu trả lời mới
         public async Task<Answer> CreateAnswerAsync(Answer answer)
         {
@@ -80,7 +88,7 @@ namespace Doctors_Web_Forum.BLL.Services
             {
                 return false; // Nếu câu trả lời không tồn tại
             }
-
+                
             _context.Answers.Remove(answer);
             await _context.SaveChangesAsync();
             return true;
