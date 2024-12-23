@@ -77,15 +77,22 @@ namespace Doctors_Web_Forum.Services
                 return false; // Nếu profile đã tồn tại, không tạo mới
             }
 
-            // Tạo profile mới
+            // Tạo profile mới với giá trị mặc định
             var newProfile = new Profile
             {
-                UserId = userId // Đảm bảo UserId được gán
+                UserId = userId, // Đảm bảo UserId được gán
+                FullName = "New User", // Giá trị mặc định
+                Contact = "No Contact", // Giá trị mặc định
+                Phone = "No Phone", // Giá trị mặc định
+                Address = "No Address", // Giá trị mặc định
+                Status = true, // Giá trị mặc định, có thể là Active
+                Picture = null // Giá trị mặc định hoặc null nếu không có ảnh
             };
 
             _context.Profiles.Add(newProfile);
             var result = await _context.SaveChangesAsync();
             return result > 0;
         }
+
     }
 }
