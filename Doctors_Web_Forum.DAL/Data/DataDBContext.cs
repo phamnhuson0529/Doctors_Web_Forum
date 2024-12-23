@@ -53,6 +53,13 @@ namespace Doctors_Web_Forum.DAL.Data
                 .WithMany(u => u.Answers)  // Mỗi người dùng có nhiều câu trả lời
                 .HasForeignKey(a => a.UserId)  // Khóa ngoại là UserId trong bảng Answer
                 .OnDelete(DeleteBehavior.Restrict);  // Khi xóa người dùng, không xóa câu trả lời
+
+            // Cấu hình mối quan hệ 1-1 giữa Profile và User
+            modelBuilder.Entity<Profile>()
+                .HasOne(p => p.User)        // Mỗi Profile có một User
+                .WithOne(u => u.Profile)    // Mỗi User có một Profile
+                .HasForeignKey<Profile>(p => p.UserId)  // Khóa ngoại là UserId trong bảng Profile
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

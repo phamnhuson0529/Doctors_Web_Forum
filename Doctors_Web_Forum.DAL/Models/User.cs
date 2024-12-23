@@ -14,7 +14,7 @@ namespace Doctors_Web_Forum.DAL.Models
         public bool Status { get; set; }
         public string? Role { get; set; }
 
-
+        public virtual Profile Profile { get; set; }
         public virtual ICollection<Question>? Questions { get; set; } 
         public virtual ICollection<Answer>? Answers { get; set; } 
     }
