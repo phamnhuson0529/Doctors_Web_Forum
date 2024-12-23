@@ -13,9 +13,18 @@ namespace Doctors_Web_Forum.DAL.Models
     {
         [Key]
         public int Id { get; set; }
-        public int UserId { get; set; }
+        [Required]
+        public string UserId { get; set; }
+        [Required]
+        public virtual User User { get; set; }
+        [Required]
+        public string FullName { get; set; }
         public string? Picture { get; set; }
+        public string? Phone { get; set; }
+        public string? Address { get; set; }
+
         public string? Contact { get; set; }
+        [Required]
         public bool Status { get; set; }
     }
 }
