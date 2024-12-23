@@ -109,17 +109,26 @@ namespace Doctors_Web_Forum.Controllers
                 // Lưu đường dẫn của ảnh vào trong Profile
                 profile.Picture = "/uploads/profile_pictures/" + fileName;
             }
+            else
+            {
+                // Nếu không upload ảnh mới, giữ nguyên ảnh cũ từ cơ sở dữ liệu
+                var existingProfile = await _profileService.GetProfileByUserIdAsync(user.Id);
+                if (existingProfile != null)
+                {
+                    profile.Picture = existingProfile.Picture; // Giữ nguyên đường dẫn ảnh cũ
+                }
+            }
 
-            // Cập nhật profile
+            // Cập nhật profile trong cơ sở dữ liệu
             var result = await _profileService.UpdateProfileAsync(profile);
             if (result)
             {
+                TempData["Success"] = "Profile updated successfully!";
                 return RedirectToAction(nameof(Index));  // Chuyển hướng về trang index nếu cập nhật thành công
             }
 
-            ModelState.AddModelError("", "Có lỗi xảy ra khi cập nhật profile.");  // Thêm thông báo lỗi nếu có sự cố
-
-            return View(profile);  // Trả về view Edit với các thông tin hiện tại
+            ModelState.AddModelError("", "An error occurred while updating the profile.");
+            return View(profile); // Trả về View với thông tin hiện tại nếu lỗi
         }
 
 
@@ -131,7 +140,7 @@ namespace Doctors_Web_Forum.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        
         public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
         {
             if (ModelState.IsValid)
@@ -147,6 +156,7 @@ namespace Doctors_Web_Forum.Controllers
                 {
                     // Đăng xuất người dùng và chuyển hướng về trang đăng nhập
                     await _signInManager.SignOutAsync();
+                    TempData["ErrorMessage"] = "Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.";
                     return RedirectToAction("Login", "Account"); // Hoặc thay đổi URL theo ý bạn
                 }
 

@@ -10,7 +10,7 @@
     @Html.AntiForgeryToken()
 
     <div class="form-group">
-        <!-- Chỉnh sửa lại asp-for để sử dụng FullName từ Profile thay vì User -->
+        <!-- Chỉnh sửa lại asp-for để sử dụng FullName từ Profile -->
         <label asp-for="FullName" class="control-label">Full Name</label>
         <input asp-for="FullName" class="form-control" />
         <span asp-validation-for="FullName" class="text-danger"></span>
@@ -52,6 +52,7 @@
         <label class="control-label">Profile Picture</label>
         <input type="file" name="pictureFile" class="form-control" />
 
+        <!-- Hiển thị ảnh hiện tại -->
         @if (!string.IsNullOrEmpty(Model.Picture))
         {
             <div>
@@ -59,6 +60,9 @@
                 <p>Current Profile Picture</p>
             </div>
         }
+
+        <!-- Trường ẩn để gửi ảnh hiện tại về Controller -->
+        <input type="hidden" asp-for="Picture" />
 
         <span asp-validation-for="Picture" class="text-danger"></span>
     </div>
