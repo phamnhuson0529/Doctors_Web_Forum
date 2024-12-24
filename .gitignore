@@ -1,6 +1,4 @@
 # Các file cấu hình địa phương
-appsettings.Development.json
-appsettings.Local.json
 
 # Các thư mục build
 bin/
