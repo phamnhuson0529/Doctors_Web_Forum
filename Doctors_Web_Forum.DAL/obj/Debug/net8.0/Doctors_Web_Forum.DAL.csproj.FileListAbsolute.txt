@@ -13,6 +13,7 @@ C:\Users\Admin\Desktop\Doctors_Web_Forum\Doctors_Web_Forum\Doctors_Web_Forum.DAL
 C:\Users\Admin\Desktop\Doctors_Web_Forum\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\Doctors_Web_Forum.DAL.genruntimeconfig.cache
 C:\Users\Admin\Desktop\Doctors_Web_Forum\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\ref\Doctors_Web_Forum.DAL.dll
 C:\Users\ADMIN\source\repos\Doctors_Web_Forum\Doctors_Web_Forum.DAL\bin\Debug\net8.0\Doctors_Web_Forum.DAL.deps.json
+C:\Users\ADMIN\source\repos\Doctors_Web_Forum\Doctors_Web_Forum.DAL\bin\Debug\net8.0\Doctors_Web_Forum.DAL.runtimeconfig.json
 C:\Users\ADMIN\source\repos\Doctors_Web_Forum\Doctors_Web_Forum.DAL\bin\Debug\net8.0\Doctors_Web_Forum.DAL.dll
 C:\Users\ADMIN\source\repos\Doctors_Web_Forum\Doctors_Web_Forum.DAL\bin\Debug\net8.0\Doctors_Web_Forum.DAL.pdb
 C:\Users\ADMIN\source\repos\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\Doctors_Web_Forum.DAL.csproj.AssemblyReference.cache
@@ -24,4 +25,5 @@ C:\Users\ADMIN\source\repos\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\ne
 C:\Users\ADMIN\source\repos\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\Doctors_Web_Forum.DAL.dll
 C:\Users\ADMIN\source\repos\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\refint\Doctors_Web_Forum.DAL.dll
 C:\Users\ADMIN\source\repos\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\Doctors_Web_Forum.DAL.pdb
+C:\Users\ADMIN\source\repos\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\Doctors_Web_Forum.DAL.genruntimeconfig.cache
 C:\Users\ADMIN\source\repos\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\ref\Doctors_Web_Forum.DAL.dll

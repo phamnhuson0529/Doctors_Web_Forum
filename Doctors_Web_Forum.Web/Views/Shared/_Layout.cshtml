@@ -8,44 +8,30 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Doctors_Web_Forum.Web.styles.css" asp-append-version="true" />
    <link rel="stylesheet" href="~/user/css/header.css" asp-append-version="true" />
-
+    <link rel="stylesheet" href="~/user/css/forums.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/user/css/home.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/user/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/user/css/topic.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/user/css/register.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/user/css/login.css" asp-append-version="true" />
 
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-light bg-light border-bottom py-3">
-            <div class="container-fluid d-flex align-items-center justify-content-between">
-                <!-- Logo -->
-                <a class="navbar-brand d-flex align-items-center" href="/">
-                    <img src="~/user/images/logo.jpg" alt="HealthBoards Logo" style="height: 50px;">
-                    <span class="fw-bold ms-2">HealthBoards</span>
-                </a>
-                <!-- Search Box -->
-                <form class="input-group w-50 me-auto ms-3">
-                    <input class="form-control" type="search" placeholder="Search HealthBoards" aria-label="Search">
-                    <button class="btn btn-primary" type="submit">Search</button>
-                </form>
-                <!-- Buttons -->
-                <div class="d-flex ms-3">
-                    <button class="btn btn-primary me-2">Sign Up</button>
-                    <button class="btn btn-secondary">Login</button>
-                </div>
+    <header class="header">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="~/user/images/logo.jpg" alt="HealthBoards Logo" class="logo">
             </div>
-        </nav>
-        <div class="navbar bg-primary">
-            <div class="container-fluid">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Message Boards</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Drug Talk</a>
-                    </li>
-                </ul>
-            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <a asp-controller="Home" asp-action="Index">Home</a>
+                <a asp-controller="Forums" asp-action="Index">Message Boards</a>
+                <a asp-controller="Topics" asp-action="Index">Drug Talk</a>
+                <a asp-controller="Login" asp-action="Index">Login</a>
+                <a asp-controller="Register" asp-action="Index">Sign Up</a>
+            </nav>
         </div>
     </header>
 
@@ -56,11 +42,30 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="footer text-muted">
         <div class="container">
-            &copy; 2024 - Doctors_Web_Forum.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="footer-content">
+                <!-- Logo hoặc Tên Website -->
+                <div class="footer-brand">
+                    <strong>Doctors Web Forum</strong>
+                </div>
+
+                <!-- Các liên kết cần thiết -->
+                <div class="footer-links">
+                    <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy Policy</a>
+                    <a asp-area="" asp-controller="Home" asp-action="Terms">Terms of Service</a>
+                    <a asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a>
+                    <a asp-area="" asp-controller="Home" asp-action="About">About Us</a>
+                </div>
+
+                <!-- Thông tin bản quyền -->
+                <div class="footer-copyright">
+                    &copy; 2024 Doctors_Web_Forum.Web. All rights reserved.
+                </div>
+            </div>
         </div>
     </footer>
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

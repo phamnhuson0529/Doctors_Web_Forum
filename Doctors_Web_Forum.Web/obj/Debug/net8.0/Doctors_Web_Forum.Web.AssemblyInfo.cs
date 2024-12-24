@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Doctors_Web_Forum.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+30148befac5a8208ace454229e4f3cb5b679a69f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1472a1c4ae06829f5f7f0c28921412e43affcf8f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Doctors_Web_Forum.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Doctors_Web_Forum.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
