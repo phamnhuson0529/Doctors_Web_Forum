@@ -1,76 +1,89 @@
-﻿/* Toàn bộ phần Header */
-header {
-    font-family: Arial, sans-serif;
-    background-color: #fffbeb; /* Nền vàng nhạt */
+﻿/* Tổng thể header */
+.header {
+    background-color: #0077cc;
+    padding: 15px 0;
+    border-bottom: 4px solid #005fa3;
+    flex-shrink: 0; /* Không cho header co lại */
 }
 
-/* Navbar chính */
-.navbar {
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Khoảng cách giữa logo và chữ */
-}
-
-    .navbar-brand img {
-        max-height: 50px;
-    }
-
-/* Search Box */
-.input-group {
-    width: 50%;
-}
-
-.navbar form {
-    flex: 1;
-    margin-right: auto;
-}
-
-/* Nút Sign Up và Login */
-.navbar .btn-primary,
-.navbar .btn-secondary {
-    padding: 10px 20px;
-}
-
-/* Thanh navbar dưới */
-.navbar.bg-primary {
-    margin-top: -1px; /* Để khít với thanh trên */
-    padding: 10px 20px;
-    background-color: #003366; /* Xanh đậm */
-}
-
-    .navbar.bg-primary ul {
+    .header .container {
         display: flex;
-        padding: 0;
-        margin: 0;
-        list-style: none; /* Xóa dấu chấm tròn */
-        gap: 20px; /* Khoảng cách giữa các mục */
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    /* Logo */
+    .header .logo {
+        height: 50px;
     }
 
-        .navbar.bg-primary ul li {
-            list-style: none;
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+    .nav-menu a {
+        color: #ffffff; /* Màu chữ trắng */
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1em;
+        padding: 10px 15px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+        .nav-menu a:hover {
+            background-color: #005fa3; /* Đổi nền khi rê chuột */
+            color: #ffcc00; /* Màu chữ vàng khi hover */
         }
 
-            .navbar.bg-primary ul li a {
-                color: #ffcc00; /* Vàng nổi bật */
-                text-decoration: none;
-                font-size: 1rem;
-                font-weight: bold;
-            }
 
-                .navbar.bg-primary ul li a:hover {
-                    text-decoration: underline;
-                    color: #ffffff; /* Khi hover, chuyển thành trắng */
-                }
-.navbar-brand img {
-    max-height: 50px; /* Đặt chiều cao tối đa */
-    width: auto; /* Giữ tỉ lệ hình ảnh */
-    margin-right: 10px; /* Khoảng cách giữa logo và văn bản */
+/* Tổng thể Footer */
+.footer {
+    background-color: #0077cc;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    flex-shrink: 0; /* Không để footer bị thu nhỏ */
+    width: 100%; /* Đảm bảo footer luôn phủ đủ chiều ngang */
 }
 
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Logo hoặc tên website */
+.footer-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Liên kết */
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+    .footer-links a {
+        color: #ffcc00; /* Màu vàng */
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        .footer-links a:hover {
+            color: #ffffff; /* Khi rê chuột chuyển sang trắng */
+            text-decoration: underline;
+        }
+
+/* Thông tin bản quyền */
+.footer-copyright {
+    font-size: 0.8em;
+    color: #d1e7ff; /* Màu xanh nhạt */
+}

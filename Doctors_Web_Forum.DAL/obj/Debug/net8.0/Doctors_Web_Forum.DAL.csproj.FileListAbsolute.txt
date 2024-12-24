@@ -25,3 +25,8 @@ C:\Users\Admin\Desktop\Doctors_Web_Forum\Doctors_Web_Forum\Doctors_Web_Forum.DAL
 C:\Users\Admin\Desktop\Doctors_Web_Forum\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\Doctors_Web_Forum.DAL.pdb
 C:\Users\Admin\Desktop\Doctors_Web_Forum\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\Doctors_Web_Forum.DAL.genruntimeconfig.cache
 C:\Users\Admin\Desktop\Doctors_Web_Forum\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\ref\Doctors_Web_Forum.DAL.dll
+<<<<<<< HEAD
+C:\Users\ADMIN\source\repos\Doctors_Web_Forum\Doctors_Web_Forum.DAL\bin\Debug\net8.0\Doctors_Web_Forum.DAL.runtimeconfig.json
+C:\Users\ADMIN\source\repos\Doctors_Web_Forum\Doctors_Web_Forum.DAL\obj\Debug\net8.0\Doctors_Web_Forum.DAL.genruntimeconfig.cache
+=======
+>>>>>>> a5832bb7facb04fb63d85e1bb7cb275835cb0d09
