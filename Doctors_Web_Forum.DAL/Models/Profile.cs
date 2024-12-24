@@ -26,5 +26,7 @@ namespace Doctors_Web_Forum.DAL.Models
         public string? Contact { get; set; }
         [Required]
         public bool Status { get; set; }
+
+        public virtual DoctorProfile? DoctorProfile { get; set; }
     }
 }
