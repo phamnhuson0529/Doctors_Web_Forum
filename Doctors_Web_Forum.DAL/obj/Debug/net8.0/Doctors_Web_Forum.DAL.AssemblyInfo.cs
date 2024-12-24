@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Doctors_Web_Forum.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0db1e75c5943a194358455f7e7a7df7d77e581a6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f6ab957e68c6a05f156d7b47e962086992744ab")]
 [assembly: System.Reflection.AssemblyProductAttribute("Doctors_Web_Forum.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Doctors_Web_Forum.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
