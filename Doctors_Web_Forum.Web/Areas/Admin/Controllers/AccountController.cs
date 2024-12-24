@@ -29,7 +29,6 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                
                 var user = await _userManager.FindByEmailAsync(loginVM.Email);
                 if (user == null)
                 {
@@ -37,21 +36,31 @@ namespace Doctors_Web_Forum.Web.Areas.Admin.Controllers
                     return View(loginVM);
                 }
 
-                
-                var result = await _signInManager.PasswordSignInAsync(user, loginVM.Password,false,false);
+                var result = await _signInManager.PasswordSignInAsync(user, loginVM.Password, false, false);
 
                 if (result.Succeeded)
                 {
+                    // Cập nhật thời gian đăng nhập cuối
+                    user.LastLogin = DateTime.UtcNow;
+
+                    // Lưu thông tin người dùng với thời gian đăng nhập mới
+                    var updateResult = await _userManager.UpdateAsync(user);
+                    if (!updateResult.Succeeded)
+                    {
+                        TempData["error"] = "Không thể cập nhật thời gian đăng nhập.";
+                        return RedirectToAction("Login");
+                    }
+
                     TempData["success"] = "Đăng Nhập thành công!";
                     return Redirect(loginVM.ReturnUrl ?? "/Admin/Dashboard/Index");
                 }
 
-               
-                ModelState.AddModelError("", "Invalid Email and Password!");
+                ModelState.AddModelError("", "Email hoặc mật khẩu không đúng!");
             }
 
             return View(loginVM);
         }
+
 
 
 

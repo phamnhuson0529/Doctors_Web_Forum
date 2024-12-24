@@ -23,6 +23,9 @@ namespace Doctors_Web_Forum.DAL.Models
         public string? Description { get; set; }
 
         [Required]
-        public bool Status { get; set; }
+        public bool Status { get; set; } = true;
+
+
+        public virtual ICollection<Question>? Questions { get; set; }
     }
 }

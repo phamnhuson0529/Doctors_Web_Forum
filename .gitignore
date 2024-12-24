@@ -19,6 +19,13 @@ bin/
 
 # Các thư mục và file do các công cụ biên dịch tạo ra (như DLL, PDB)
 
+# Các thư mục build
+bin/
+obj/
+
+# Các thư mục và file do các công cụ biên dịch tạo ra (như DLL, PDB)
+**/bin/
+**/obj/
 
 
 # Các file DLL và PDB

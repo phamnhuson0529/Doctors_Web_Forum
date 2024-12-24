@@ -50,31 +50,65 @@ namespace Doctors_Web_Forum.BLL.Services
             return (data, pager);
         }
 
-
         public async Task<User> GetUserByIdAsync(string id)
         {
             return await _userManager.FindByIdAsync(id);
         }
 
-        public async Task<bool> CreateUserAsync(User user, string password)
+        public async Task<bool> CreateUserAsync(User model, string role)
         {
-            var result = await _userManager.CreateAsync(user, password);
-            return result.Succeeded;
+            var user = new User
+            {
+                UserName = model.UserName,
+                Email = model.Email,
+                PasswordHash = model.PasswordHash,
+                PhoneNumber = model.PhoneNumber,
+                Address = model.Address,
+                Status = model.Status,
+                Role = role
+            };
+
+            var result = await _userManager.CreateAsync(user);
+
+            if (result.Succeeded)
+            {
+                // Gán vai trò cho người dùng
+                await _userManager.AddToRoleAsync(user, role);
+                return true;
+            }
+
+            return false;
         }
+
 
         public async Task<bool> UpdateUserAsync(User user)
         {
             var existingUser = await _userManager.FindByIdAsync(user.Id);
             if (existingUser == null) return false;
 
+            // Cập nhật các trường trong model của User
             existingUser.FullName = user.FullName;
+            existingUser.PhoneNumber = user.PhoneNumber;
             existingUser.Address = user.Address;
             existingUser.Status = user.Status;
             existingUser.LastLogin = user.LastLogin;
 
+            // Nếu có thay đổi tên người dùng hoặc email, cập nhật tương ứng
+            if (existingUser.UserName != user.UserName)
+            {
+                existingUser.UserName = user.UserName;
+            }
+
+            if (existingUser.Email != user.Email)
+            {
+                existingUser.Email = user.Email;
+            }
+
+
             var result = await _userManager.UpdateAsync(existingUser);
             return result.Succeeded;
         }
+
 
         public async Task<bool> DeleteUserAsync(string id)
         {
@@ -102,11 +136,17 @@ namespace Doctors_Web_Forum.BLL.Services
         public async Task<IEnumerable<string>> GetUserRolesAsync(string userId)
         {
             var user = await _userManager.FindByIdAsync(userId);
-            if (user == null) return Enumerable.Empty<string>();
+            if (user == null) return Enumerable.Empty<string>(); // Trả về danh sách rỗng nếu người dùng không tồn tại
 
-            return await _userManager.GetRolesAsync(user);
+            var roles = await _userManager.GetRolesAsync(user);
+            return roles ?? Enumerable.Empty<string>();  // Nếu không có roles, trả về danh sách rỗng
         }
 
-        
+
+        public async Task<IEnumerable<string>> GetAllRolesAsync()
+        {
+            var roles = await _roleManager.Roles.Select(r => r.Name).ToListAsync();
+            return roles;
+        }
     }
 }

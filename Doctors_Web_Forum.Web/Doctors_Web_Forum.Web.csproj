@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Admin\Views\Answer\**" />
+    <Content Remove="Areas\Admin\Views\Answer\**" />
+    <EmbeddedResource Remove="Areas\Admin\Views\Answer\**" />
+    <None Remove="Areas\Admin\Views\Answer\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
       <PrivateAssets>all</PrivateAssets>
@@ -28,10 +35,6 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\Answer\" />
-    <Folder Include="Areas\Admin\Views\AdminLog\" />
-    <Folder Include="Areas\Admin\Views\Profile\" />
-    <Folder Include="Areas\Admin\Views\Question\" />
     <Folder Include="Views\Topic\" />
   </ItemGroup>
 

@@ -2,6 +2,7 @@
 using Doctors_Web_Forum.BLL.Services;
 using Doctors_Web_Forum.DAL.Data;
 using Doctors_Web_Forum.DAL.Models;
+using Doctors_Web_Forum.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,6 +24,11 @@ builder.Services.AddDbContext<DataDBContext>(options => options.UseSqlServer(bui
 builder.Services.AddScoped<ITopicService,TopicService>();
 
 builder.Services.AddScoped<IUserService, UserService>();
+
+builder.Services.AddScoped<IRoleService, RoleService>();
+builder.Services.AddScoped<IQuestionService, QuestionService>();
+builder.Services.AddScoped<IAnswerService, AnswerService>();
+builder.Services.AddScoped<IProfileService, ProfileService>();
 
 
 
