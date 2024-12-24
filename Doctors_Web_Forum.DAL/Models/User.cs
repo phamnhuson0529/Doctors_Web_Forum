@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Doctors_Web_Forum.DAL.Models
@@ -12,6 +13,7 @@ namespace Doctors_Web_Forum.DAL.Models
         public DateTime RegDate { get; set; } = DateTime.Now;
         public DateTime? LastLogin { get; set; }
         public bool Status { get; set; }
+        [Required]
         public string? Role { get; set; }
 
         public virtual Profile Profile { get; set; }

@@ -13,7 +13,10 @@ namespace Doctors_Web_Forum.DAL.Models
     {
         [Key]
         public int Id { get; set; }
-        public int UserId { get; set; }
+        [Required]
+        public int ProfileId { get; set; } // Liên kết với Profile
+        [ForeignKey("ProfileId")]
+        public virtual Profile Profile { get; set; }
         public string? Profession { get; set; }
         public string? Experience { get; set; }
         public bool Status { get; set; }
