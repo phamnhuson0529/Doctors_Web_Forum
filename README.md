@@ -196,3 +196,102 @@ JDBC
 
 SQL Server 2000 (or later) / Oracle 9i / MS Access JDBC Driver
 
+==============================================================================================================================================================================
+Phân tích chức năng để phù hợp với yêu cầu và kì vọng của khách hàng
+Phần 1: Giao diện chung
+1.	Logo và biểu tượng chữ thập nền:
+o	Yêu cầu:
+	Tất cả các trang trong ứng dụng phải hiển thị logo chung.
+	Biểu tượng chữ thập sẽ làm nền cho toàn bộ giao diện.
+o	Thực hiện:
+	Tạo layout template chứa header với logo và background có biểu tượng chữ thập.
+	Sử dụng CSS để tích hợp hình nền chữ thập (dạng watermark hoặc SVG).
+________________________________________
+Phần 2: Đăng ký và liên hệ
+2.	Đăng ký trực tuyến:
+o	Yêu cầu:
+	Người dùng có thể đăng ký tài khoản với thông tin cơ bản: tên, email, mật khẩu, số điện thoại, và lựa chọn chế độ công khai hoặc riêng tư.
+o	Thực hiện:
+	Xây dựng form đăng ký với các trường bắt buộc.
+	Áp dụng xác thực phía client (Angular) và phía server (ASP.NET).
+	Lưu trạng thái công khai hoặc riêng tư vào cơ sở dữ liệu.
+3.	Biểu mẫu liên hệ:
+o	Yêu cầu:
+	Người dùng có thể đặt câu hỏi và người khác trả lời qua ứng dụng.
+o	Thực hiện:
+	Xây dựng module liên hệ, bao gồm:
+	Form đặt câu hỏi.
+	Danh sách câu hỏi hiển thị kèm phần trả lời.
+	Chức năng trả lời câu hỏi (dành cho người dùng đã đăng nhập).
+________________________________________
+Phần 3: Trang chủ
+4.	Hiển thị thông tin trên trang chủ:
+o	Yêu cầu:
+	Góc trên của trang chủ hiển thị số lượng người dùng đã đăng ký và đang đăng nhập.
+o	Thực hiện:
+	Tạo API thống kê (ASP.NET) để trả về số lượng người dùng đăng ký và đăng nhập.
+	Hiển thị dữ liệu bằng Angular thông qua các API.
+5.	Cửa sổ bật lên (popup):
+o	Yêu cầu:
+	Hiển thị popup khi:
+	Người dùng đăng ký thành công.
+	Người dùng nhập sai mật khẩu.
+	Các thông báo quan trọng khác.
+o	Thực hiện:
+	Sử dụng thư viện popup như SweetAlert2 hoặc ngx-toastr trong Angular.
+________________________________________
+Phần 4: Quản lý tài khoản
+6.	Thông tin tài khoản:
+o	Yêu cầu:
+	Người dùng có thể tùy chọn hiển thị công khai hoặc riêng tư thông tin của mình.
+o	Thực hiện:
+	Thêm tùy chọn chế độ hiển thị công khai/riêng tư vào thông tin tài khoản.
+	Xây dựng API kiểm tra trạng thái hiển thị trước khi trả về thông tin chi tiết tài khoản.
+7.	Thông tin cá nhân:
+	Yêu cầu:
+	Thông tin tài khoản bao gồm:
+	Thông tin liên lạc.
+	Thông tin cá nhân.
+	Trình độ chuyên môn, kinh nghiệm, thành tích.
+o	Thực hiện:
+	Cập nhật cơ sở dữ liệu để lưu các thông tin này.
+	Tạo giao diện cập nhật thông tin (Angular) và API tương ứng.
+________________________________________
+Phần 5: Chức năng tìm kiếm nâng cao
+8.	Tìm kiếm nâng cao:
+o	Yêu cầu:
+	Tìm kiếm dựa trên vị trí, chuyên môn, kinh nghiệm.
+o	Thực hiện:
+	Xây dựng API tìm kiếm với các tham số đầu vào: vị trí, chuyên môn, kinh nghiệm.
+	Giao diện tìm kiếm hiển thị kết quả theo dạng bảng.
+________________________________________
+Phần 6: Phân quyền
+9.	Quyền người dùng:
+o	Yêu cầu:
+	Người dùng chỉ có thể:
+	Cập nhật tài khoản.
+	Đăng/ trả lời truy vấn.
+	Lấy thông tin các bác sĩ hoặc người dùng khác (theo chế độ công khai/riêng tư).
+o	Thực hiện:	Áp dụng Spring Security hoặc ASP.NET Identity để kiểm soát quyền.
+	Chỉ trả về thông tin khi người dùng có quyền xem (API dựa trên vai trò).
+10.	Quyền quản trị viên:
+o	Yêu cầu:
+	Quản trị viên có thể:
+	Xóa người dùng.
+	Quản lý tài khoản và quyền.
+o	Thực hiện:
+	Tạo khu vực quản trị riêng.
+	Thêm chức năng xóa người dùng qua giao diện quản trị.
+________________________________________
+Phần 7: Quy chuẩn phát triển
+11.	Bình luận mã:
+o	Thực hiện:
+	Mỗi đoạn mã cần bình luận giải thích logic, biến, và mục đích.
+12.	Tài liệu kỹ thuật:
+o	Thực hiện:
+	Ghi chép lại kiến trúc hệ thống, quy trình API, các tính năng đã triển khai.
+	Hướng dẫn cách triển khai và sử dụng.
+ 
+
+
+
